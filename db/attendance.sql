@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Feb 13, 2023 at 01:15 PM
--- Server version: 5.7.40
+-- Generation Time: Feb 13, 2023 at 06:56 PM
+-- Server version: 5.7.33
 -- PHP Version: 7.4.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -225,7 +225,251 @@ INSERT INTO `admin_operation_log` (`id`, `user_id`, `path`, `method`, `ip`, `inp
 (148, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 07:12:10', '2023-02-13 07:12:10'),
 (149, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":null,\"name\":null,\"email\":null,\"mobile\":null,\"password\":null,\"c_password\":null,\"address\":null,\"status\":\"1\",\"_token\":\"a9rZzU4TPzkYSzKCvHcsbvB8ZSMaW8uKQEoJjSZK\"}', '2023-02-13 07:12:13', '2023-02-13 07:12:13'),
 (150, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 07:12:28', '2023-02-13 07:12:28'),
-(151, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 07:12:43', '2023-02-13 07:12:43');
+(151, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 07:12:43', '2023-02-13 07:12:43'),
+(152, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 08:43:55', '2023-02-13 08:43:55'),
+(153, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-13 08:44:17', '2023-02-13 08:44:17'),
+(154, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 08:44:20', '2023-02-13 08:44:20'),
+(155, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-13 08:44:55', '2023-02-13 08:44:55'),
+(156, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 08:44:55', '2023-02-13 08:44:55'),
+(157, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 08:47:18', '2023-02-13 08:47:18'),
+(158, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 08:48:20', '2023-02-13 08:48:20'),
+(159, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 08:48:26', '2023-02-13 08:48:26'),
+(160, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 08:50:47', '2023-02-13 08:50:47'),
+(161, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 08:51:34', '2023-02-13 08:51:34'),
+(162, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 08:52:04', '2023-02-13 08:52:04'),
+(163, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 08:52:16', '2023-02-13 08:52:16'),
+(164, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 08:53:44', '2023-02-13 08:53:44'),
+(165, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 08:54:00', '2023-02-13 08:54:00'),
+(166, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 08:55:57', '2023-02-13 08:55:57'),
+(167, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 08:56:16', '2023-02-13 08:56:16'),
+(168, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 08:57:18', '2023-02-13 08:57:18'),
+(169, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Simon Rutledge\",\"name\":[\"Rudyard Humphrey\"],\"email\":[\"mata@mailinator.com\"],\"mobile\":[\"In consequatur Aspe\"],\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Porro quo similique\",\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 08:57:28', '2023-02-13 08:57:28'),
+(170, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 08:57:55', '2023-02-13 08:57:55'),
+(171, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Aristotle Mclean\",\"name\":\"Alden Bond\",\"email\":\"lasucum@mailinator.com\",\"mobile\":\"Id hic explicabo N\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Natus facilis sit co\",\"c_name\":[\"Cleo Horn\"],\"c_mobile\":[\"Qui architecto fugit\"],\"c_email\":[\"xaxuvafuqi@mailinator.com\"],\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 08:58:01', '2023-02-13 08:58:01'),
+(172, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Aristotle Mclean\",\"name\":\"Alden Bond\",\"email\":\"lasucum@mailinator.com\",\"mobile\":\"kkkkkkkkkkk\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Natus facilis sit co\",\"c_name\":[\"Cleo Horn\"],\"c_mobile\":[\"Qui architecto fugit\"],\"c_email\":[\"xaxuvafuqi@mailinator.com\"],\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 08:58:11', '2023-02-13 08:58:11'),
+(173, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Jeremy Booker\",\"name\":\"Scarlet Blankenship\",\"email\":\"nowofuvy@mailinator.com\",\"mobile\":\"01708797991\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Quia tenetur similiq\",\"c_name\":[\"Kaye Meyers\",\"Baker Chang\"],\"c_mobile\":[\"Totam ab recusandae\",\"Eos consequatur Con\"],\"c_email\":[\"qexawyr@mailinator.com\",\"lykepe@mailinator.com\"],\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:00:31', '2023-02-13 09:00:31'),
+(174, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 09:01:15', '2023-02-13 09:01:15'),
+(175, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Thane Bolton\",\"name\":\"Amal Ross\",\"email\":\"lojov@mailinator.com\",\"mobile\":\"Deserunt natus susci\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Ullamco est non dolo\",\"c_name\":[\"Cyrus Potter\"],\"c_mobile\":[\"Ipsum ex assumenda\"],\"c_email\":[\"pyxydu@mailinator.com\"],\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:01:22', '2023-02-13 09:01:22'),
+(176, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Thane Bolton\",\"name\":\"Amal Ross\",\"email\":\"lojov@mailinator.com\",\"mobile\":\"lllllllllll\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Ullamco est non dolo\",\"c_name\":[\"Cyrus Potter\"],\"c_mobile\":[\"Ipsum ex assumenda\"],\"c_email\":[\"pyxydu@mailinator.com\"],\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:01:30', '2023-02-13 09:01:30'),
+(177, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Thane Bolton\",\"name\":\"Amal Ross\",\"email\":\"lojov@mailinator.com\",\"mobile\":\"01lllllllllll\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Ullamco est non dolo\",\"c_name\":[\"Cyrus Potter\"],\"c_mobile\":[\"Ipsum ex assumenda\"],\"c_email\":[\"pyxydu@mailinator.com\"],\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:01:40', '2023-02-13 09:01:40'),
+(178, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Thane Bolton\",\"name\":\"Amal Ross\",\"email\":\"lojov@mailinator.com\",\"mobile\":\"01llllllllll\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Ullamco est non dolo\",\"c_name\":[\"Cyrus Potter\"],\"c_mobile\":[\"Ipsum ex assumenda\"],\"c_email\":[\"pyxydu@mailinator.com\"],\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:01:47', '2023-02-13 09:01:47'),
+(179, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Thane Bolton\",\"name\":\"Amal Ross\",\"email\":\"lojov@mailinator.com\",\"mobile\":\"01700000000\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Ullamco est non dolo\",\"c_name\":[\"Cyrus Potter\"],\"c_mobile\":[\"Ipsum ex assumenda\"],\"c_email\":[\"pyxydu@mailinator.com\"],\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:01:56', '2023-02-13 09:01:56'),
+(180, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Thane Bolton\",\"name\":\"Amal Ross\",\"email\":\"lojov@mailinator.com\",\"mobile\":\"01700000000\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Ullamco est non dolo\",\"c_name\":[\"Cyrus Potter\"],\"c_mobile\":[\"Ipsum ex assumenda\"],\"c_email\":[\"pyxydu@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:02:04', '2023-02-13 09:02:04'),
+(181, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Thane Bolton\",\"name\":\"Amal Ross\",\"email\":\"lojov@mailinator.com\",\"mobile\":\"01700000000\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Ullamco est non dolo\",\"c_name\":[\"Cyrus Potter\",\"Cyrus Potter\"],\"c_mobile\":[\"Cyrus Potter\",\"Cyrus Potter\"],\"c_email\":[\"pyxydu@mailinator.com\",\"pyxydeu@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:02:24', '2023-02-13 09:02:24'),
+(182, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Thane Bolton\",\"name\":\"Amal Ross\",\"email\":\"lojov@mailinator.com\",\"mobile\":\"01700000000\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Ullamco est non dolo\",\"c_name\":[\"Cyrus Potter\",\"Cyrus Potter\"],\"c_mobile\":[\"Cyrus Potter\",\"Cyrus Potter\"],\"c_email\":[\"pyxydu@mailinator.com\",\"pyxydeu@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:07:01', '2023-02-13 09:07:01'),
+(183, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Thane Bolton\",\"name\":\"Amal Ross\",\"email\":\"lojov@mailinator.com\",\"mobile\":\"01700000000\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Ullamco est non dolo\",\"c_name\":[\"Cyrus Potter\",\"Cyrus Potter\"],\"c_mobile\":[\"Cyrus Potter\",\"Cyrus Potter\"],\"c_email\":[\"pyxydumailinator.com\",\"pyxydeu@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:07:22', '2023-02-13 09:07:22'),
+(184, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Thane Bolton\",\"name\":\"Amal Ross\",\"email\":\"lojov@mailinator.com\",\"mobile\":\"01700000000\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Ullamco est non dolo\",\"c_name\":[\"Cyrus Potter\",\"Cyrus Potter\"],\"c_mobile\":[\"Cyrus Potter\",\"Cyrus Potter\"],\"c_email\":[\"pyxydumailinator.com\",\"pyxydeu@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:07:52', '2023-02-13 09:07:52'),
+(185, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Thane Bolton\",\"name\":\"Amal Ross\",\"email\":\"lojov@mailinator.com\",\"mobile\":\"01700000000\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Ullamco est non dolo\",\"c_name\":[\"Cyrus Potter\",\"Cyrus Potter\"],\"c_mobile\":[\"Cyrus Potter\",\"Cyrus Potter\"],\"c_email\":[\"pyxydumailinator.com\",\"pyxydeu@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:10:23', '2023-02-13 09:10:23'),
+(186, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Thane Bolton\",\"name\":\"Amal Ross\",\"email\":\"lojov@mailinator.com\",\"mobile\":\"01700000000\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Ullamco est non dolo\",\"c_name\":[\"Cyrus Potter\",\"Cyrus Potter\"],\"c_mobile\":[\"Cyrus Potter\",\"Cyrus Potter\"],\"c_email\":[\"pyxydumailinator.com\",\"pyxydeu@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:12:07', '2023-02-13 09:12:07'),
+(187, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 09:12:08', '2023-02-13 09:12:08'),
+(188, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 09:12:29', '2023-02-13 09:12:29'),
+(189, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Thane Bolton\",\"name\":\"Amal Ross\",\"email\":\"lojov@mailinator.com\",\"mobile\":\"01700000000\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Ullamco est non dolo\",\"c_name\":[\"Cyrus Potter\",\"Cyrus Potter\"],\"c_mobile\":[\"Cyrus Potter\",\"Cyrus Potter\"],\"c_email\":[\"pyxydumaili@nator.com\",\"pyxydeu@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:12:29', '2023-02-13 09:12:29'),
+(190, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Tanisha Joseph\",\"name\":\"Fulton Romero\",\"email\":\"gojyjiwef@mailinator.com\",\"mobile\":\"01708797998\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Odit deserunt dolore\",\"c_name\":[\"Chanda Maddox\",\"Cleo Horn\"],\"c_mobile\":[\"Non culpa aliquam m\",\"Qui architecto fugit\"],\"c_email\":[\"mise@mailinator.com\",\"xaxuvafuqi@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:12:58', '2023-02-13 09:12:58'),
+(191, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Tanisha Joseph\",\"name\":\"Fulton Romero\",\"email\":\"gojyjiwef@mailinator.com\",\"mobile\":\"01708797998\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Odit deserunt dolore\",\"c_name\":[\"Chanda Maddox\",\"Cleo Horn\"],\"c_mobile\":[\"Non culpa aliquam m\",\"Qui architecto fugit\"],\"c_email\":[\"mise@mailinator.com\",\"xaxuvafuqi@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:13:09', '2023-02-13 09:13:09'),
+(192, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Tanisha Joseph\",\"name\":\"Fulton Romero\",\"email\":\"gojyjiwef@mailinator.com\",\"mobile\":\"01708797998\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Odit deserunt dolore\",\"c_name\":[\"Chanda Maddox\",\"Cleo Horn\"],\"c_mobile\":[\"Non culpa aliquam m\",\"Qui architecto fugit\"],\"c_email\":[\"mise@mailinator.com\",\"xaxuvafuqi@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:15:11', '2023-02-13 09:15:11'),
+(193, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Tanisha Joseph\",\"name\":\"Fulton Romero\",\"email\":\"gojyjiwef@mailinator.com\",\"mobile\":\"01708797998\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Odit deserunt dolore\",\"c_name\":[\"Chanda Maddox\",\"Cleo Horn\"],\"c_mobile\":[\"Non culpa aliquam m\",\"Qui architecto fugit\"],\"c_email\":[\"mise@mailinator.com\",\"xaxuvafuqi@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:19:42', '2023-02-13 09:19:42'),
+(194, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Tanisha Joseph\",\"name\":\"Fulton Romero\",\"email\":\"gojyjiwef@mailinator.com\",\"mobile\":\"01708797998\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Odit deserunt dolore\",\"c_name\":[\"Chanda Maddox\",\"Cleo Horn\"],\"c_mobile\":[\"Non culpa aliquam m\",\"Qui architecto fugit\"],\"c_email\":[\"mise@mailinator.com\",\"xaxuvafuqi@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:20:09', '2023-02-13 09:20:09'),
+(195, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Tanisha Joseph\",\"name\":\"Fulton Romero\",\"email\":\"gojyjiwef@mailinator.com\",\"mobile\":\"01708797998\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Odit deserunt dolore\",\"c_name\":[\"Chanda Maddox\",\"Cleo Horn\"],\"c_mobile\":[\"0170\",\"Qui architecto fugit\"],\"c_email\":[\"mise@mailinator.com\",\"xaxuvafuqi@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:20:13', '2023-02-13 09:20:13'),
+(196, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Tanisha Joseph\",\"name\":\"Fulton Romero\",\"email\":\"gojyjiwef@mailinator.com\",\"mobile\":\"01708797998\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Odit deserunt dolore\",\"c_name\":[\"Chanda Maddox\",\"Cleo Horn\"],\"c_mobile\":[\"0170\",\"0174\"],\"c_email\":[\"mise@mailinator.com\",\"xaxuvafuqi@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:20:20', '2023-02-13 09:20:20'),
+(197, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 09:20:22', '2023-02-13 09:20:22'),
+(198, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Tanisha Joseph\",\"name\":\"Fulton Romero\",\"email\":\"gojyjiwef@mailinator.com\",\"mobile\":\"01708797998\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Odit deserunt dolore\",\"c_name\":[\"Chanda Maddox\",\"Cleo Horn\"],\"c_mobile\":[\"0170\",\"0174\"],\"c_email\":[\"mise@mailinator.com\",\"xaxuvafuqi@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:21:06', '2023-02-13 09:21:06'),
+(199, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Tanisha Joseph\",\"name\":\"Fulton Romero\",\"email\":\"gojyjiwef@mailinator.com\",\"mobile\":\"01708797998\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Odit deserunt dolore\",\"c_name\":[\"Chanda Maddox\",\"Cleo Horn\"],\"c_mobile\":[\"0170\",\"0174\"],\"c_email\":[\"mise@mailinator.com\",\"xaxuvafuqi@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:21:15', '2023-02-13 09:21:15'),
+(200, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Tanisha Joseph\",\"name\":\"Fulton Romero\",\"email\":\"gojyjiwef@mailinator.com\",\"mobile\":\"01708797998\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Odit deserunt dolore\",\"c_name\":[\"Chanda Maddox\",\"Cleo Horn\"],\"c_mobile\":[\"0170\",\"0174\"],\"c_email\":[\"mise@mailinator.com\",\"xaxuvafuqi@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:21:45', '2023-02-13 09:21:45'),
+(201, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Tanisha Joseph\",\"name\":\"Fulton Romero\",\"email\":\"gojyjiwef@mailinator.com\",\"mobile\":\"01708797998\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Odit deserunt dolore\",\"c_name\":[\"Chanda Maddox\",\"Cleo Horn\"],\"c_mobile\":[\"0170\",\"017400000000\"],\"c_email\":[\"mise@mailinator.com\",\"xaxuvafuqi@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:21:51', '2023-02-13 09:21:51'),
+(202, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Tanisha Joseph\",\"name\":\"Fulton Romero\",\"email\":\"gojyjiwef@mailinator.com\",\"mobile\":\"01708797998\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Odit deserunt dolore\",\"c_name\":[\"Chanda Maddox\",\"Cleo Horn\"],\"c_mobile\":[\"0170\",\"017400000000000\"],\"c_email\":[\"mise@mailinator.com\",\"xaxuvafuqi@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:21:54', '2023-02-13 09:21:54'),
+(203, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Tanisha Joseph\",\"name\":\"Fulton Romero\",\"email\":\"gojyjiwef@mailinator.com\",\"mobile\":\"01708797998\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Odit deserunt dolore\",\"c_name\":[\"Chanda Maddox\",\"Cleo Horn\"],\"c_mobile\":[\"0170\",\"017400000000000\"],\"c_email\":[\"mise@mailinator.com\",\"xaxuvafuqi@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:24:15', '2023-02-13 09:24:15'),
+(204, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Tanisha Joseph\",\"name\":\"Fulton Romero\",\"email\":\"gojyjiwef@mailinator.com\",\"mobile\":\"01708797998\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Odit deserunt dolore\",\"c_name\":[\"Chanda Maddox\",\"Cleo Horn\"],\"c_mobile\":[\"0170\",\"017400000000000\"],\"c_email\":[\"mise@mailinator.com\",\"xaxuvafuqi@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:24:41', '2023-02-13 09:24:41'),
+(205, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Tanisha Joseph\",\"name\":\"Fulton Romero\",\"email\":\"gojyjiwef@mailinator.com\",\"mobile\":\"01708797998\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Odit deserunt dolore\",\"c_name\":[\"Chanda Maddox\",\"Cleo Horn\"],\"c_mobile\":[\"0170\",\"1000000\"],\"c_email\":[\"mise@mailinator.com\",\"xaxuvafuqi@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:24:53', '2023-02-13 09:24:53');
+INSERT INTO `admin_operation_log` (`id`, `user_id`, `path`, `method`, `ip`, `input`, `created_at`, `updated_at`) VALUES
+(206, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Tanisha Joseph\",\"name\":\"Fulton Romero\",\"email\":\"gojyjiwef@mailinator.com\",\"mobile\":\"01708797998\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Odit deserunt dolore\",\"c_name\":[\"Chanda Maddox\",\"Cleo Horn\"],\"c_mobile\":[\"0170\",\"017\"],\"c_email\":[\"mise@mailinator.com\",\"xaxuvafuqi@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:24:58', '2023-02-13 09:24:58'),
+(207, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Tanisha Joseph\",\"name\":\"Fulton Romero\",\"email\":\"gojyjiwef@mailinator.com\",\"mobile\":\"01708797998\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Odit deserunt dolore\",\"c_name\":[\"Chanda Maddox\",\"Cleo Horn\"],\"c_mobile\":[\"0170\",\"01710101010\"],\"c_email\":[\"mise@mailinator.com\",\"xaxuvafuqi@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:25:11', '2023-02-13 09:25:11'),
+(208, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Tanisha Joseph\",\"name\":\"Fulton Romero\",\"email\":\"gojyjiwef@mailinator.com\",\"mobile\":\"01708797998\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Odit deserunt dolore\",\"c_name\":[\"Chanda Maddox\",\"Cleo Horn\"],\"c_mobile\":[\"0170\",\"01710101010\"],\"c_email\":[\"mise@mailinator.com\",\"xaxuvafuqi@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:25:20', '2023-02-13 09:25:20'),
+(209, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Tanisha Joseph\",\"name\":\"Fulton Romero\",\"email\":\"gojyjiwef@mailinator.com\",\"mobile\":\"01708797998\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Odit deserunt dolore\",\"c_name\":[\"Chanda Maddox\",\"Cleo Horn\"],\"c_mobile\":[\"01710101010\",\"01710101010\"],\"c_email\":[\"mise@mailinator.com\",\"xaxuvafuqi@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:25:30', '2023-02-13 09:25:30'),
+(210, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Tanisha Joseph\",\"name\":\"Fulton Romero\",\"email\":\"gojyjiwef@mailinator.com\",\"mobile\":\"01708797998\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Odit deserunt dolore\",\"c_name\":[\"Chanda Maddox\",\"Cleo Horn\"],\"c_mobile\":[\"0171010101\",\"01710101010\"],\"c_email\":[\"mise@mailinator.com\",\"xaxuvafuqi@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:25:34', '2023-02-13 09:25:34'),
+(211, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Tanisha Joseph\",\"name\":\"Fulton Romero\",\"email\":\"gojyjiwef@mailinator.com\",\"mobile\":\"01708797998\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Odit deserunt dolore\",\"c_name\":[\"Chanda Maddox\",\"Cleo Horn\"],\"c_mobile\":[\"0171010101\",\"01710101010\"],\"c_email\":[\"mise@mailinator.com\",\"xaxuvafuqi@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:26:13', '2023-02-13 09:26:13'),
+(212, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Tanisha Joseph\",\"name\":\"Fulton Romero\",\"email\":\"gojyjiwef@mailinator.com\",\"mobile\":\"01708797998\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Odit deserunt dolore\",\"c_name\":[\"Chanda Maddox\",\"Cleo Horn\"],\"c_mobile\":[\"0171010101\",\"01710101010\"],\"c_email\":[\"mise@mailinator.com\",\"xaxuvafuqi@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:30:41', '2023-02-13 09:30:41'),
+(213, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 09:42:46', '2023-02-13 09:42:46'),
+(214, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 09:43:15', '2023-02-13 09:43:15'),
+(215, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 09:44:55', '2023-02-13 09:44:55'),
+(216, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 09:45:53', '2023-02-13 09:45:53'),
+(217, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 09:47:41', '2023-02-13 09:47:41'),
+(218, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Samuel Sweeney\",\"name\":\"Demetria Blackwell\",\"email\":\"qokubag@mailinator.com\",\"mobile\":\"01708797991\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Fugiat soluta in un\",\"c_name\":[\"Tiger Mcclain\",\"Cyrus Potter\"],\"c_mobile\":[\"01700000000\",\"0154444444\"],\"c_email\":[\"vani@mailinator.com\",\"pyxydu@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:48:12', '2023-02-13 09:48:12'),
+(219, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Samuel Sweeney\",\"name\":\"Demetria Blackwell\",\"email\":\"qokubag@mailinator.com\",\"mobile\":\"01708797991\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Fugiat soluta in un\",\"c_name\":[\"Tiger Mcclain\",\"Cyrus Potter\"],\"c_mobile\":[\"01700000000\",\"0154444444\"],\"c_email\":[\"vani@mailinator.com\",\"pyxydu@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:48:21', '2023-02-13 09:48:21'),
+(220, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Samuel Sweeney\",\"name\":\"Demetria Blackwell\",\"email\":\"qokubag@mailinator.com\",\"mobile\":\"01708797991\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Fugiat soluta in un\",\"c_name\":[\"Tiger Mcclain\",\"Cyrus Potter\"],\"c_mobile\":[\"01700000000\",\"01745145147\"],\"c_email\":[\"vani@mailinator.com\",\"pyxydu@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:48:30', '2023-02-13 09:48:30'),
+(221, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 09:49:07', '2023-02-13 09:49:07'),
+(222, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 09:51:15', '2023-02-13 09:51:15'),
+(223, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Kenneth Frederick\",\"name\":\"Georgia Carson\",\"email\":\"howaxod@mailinator.com\",\"mobile\":\"0171021546\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Facere maiores conse\",\"c_name\":[\"Evangeline Kennedy\"],\"c_mobile\":[\"Sint molestias iste\"],\"c_email\":[\"dakagi@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:51:41', '2023-02-13 09:51:41'),
+(224, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Kenneth Frederick\",\"name\":\"Georgia Carson\",\"email\":\"howaxod@mailinator.com\",\"mobile\":\"01741415415\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Facere maiores conse\",\"c_name\":[\"Evangeline Kennedy\"],\"c_mobile\":[\"Sint molestias iste\"],\"c_email\":[\"dakagi@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:51:50', '2023-02-13 09:51:50'),
+(225, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Kenneth Frederick\",\"name\":\"Georgia Carson\",\"email\":\"howaxod@mailinator.com\",\"mobile\":\"01741415415\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Facere maiores conse\",\"c_name\":[null],\"c_mobile\":[null],\"c_email\":[\"dakagi@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:51:58', '2023-02-13 09:51:58'),
+(226, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Kenneth Frederick\",\"name\":\"Georgia Carson\",\"email\":\"howaxod@mailinator.com\",\"mobile\":\"01741415415\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Facere maiores conse\",\"c_name\":[null],\"c_mobile\":[null],\"c_email\":[null],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:52:04', '2023-02-13 09:52:04'),
+(227, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Kenneth Frederick\",\"name\":\"Georgia Carson\",\"email\":\"howaxod@mailinator.com\",\"mobile\":\"01741415415\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Facere maiores conse\",\"c_name\":[null],\"c_mobile\":[null],\"c_email\":[null],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:52:42', '2023-02-13 09:52:42'),
+(228, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Kenneth Frederick\",\"name\":\"Georgia Carson\",\"email\":\"howaxod@mailinator.com\",\"mobile\":\"01741415415\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Facere maiores conse\",\"c_name\":[null],\"c_mobile\":[null],\"c_email\":[null],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:53:51', '2023-02-13 09:53:51'),
+(229, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Kenneth Frederick\",\"name\":\"Georgia Carson\",\"email\":\"howaxod@mailinator.com\",\"mobile\":\"01741415415\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Facere maiores conse\",\"c_name\":[null],\"c_mobile\":[null],\"c_email\":[null],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:54:06', '2023-02-13 09:54:06'),
+(230, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 09:54:08', '2023-02-13 09:54:08'),
+(231, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":null,\"name\":null,\"email\":\"superadmin@gmail.com\",\"mobile\":null,\"password\":\"superadmin@123\",\"c_password\":null,\"address\":null,\"c_name\":[null],\"c_mobile\":[null],\"c_email\":[null],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:54:15', '2023-02-13 09:54:15'),
+(232, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":null,\"name\":null,\"email\":\"superadmin@gmail.com\",\"mobile\":null,\"password\":\"superadmin@123\",\"c_password\":null,\"address\":null,\"c_name\":[null],\"c_mobile\":[null],\"c_email\":[null],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:54:29', '2023-02-13 09:54:29'),
+(233, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":null,\"name\":null,\"email\":\"superadmin@gmail.com\",\"mobile\":null,\"password\":\"superadmin@123\",\"c_password\":null,\"address\":null,\"c_name\":[\"Cleo Horn\"],\"c_mobile\":[\"Qui architecto fugit\"],\"c_email\":[null],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:54:51', '2023-02-13 09:54:51'),
+(234, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":null,\"name\":null,\"email\":\"superadmin@gmail.com\",\"mobile\":null,\"password\":\"superadmin@123\",\"c_password\":null,\"address\":null,\"c_name\":[\"Cleo Horn\",\"Cyrus Potter\"],\"c_mobile\":[\"Qui architecto fugit\",\"2222\"],\"c_email\":[null,\"pyxydu@mailinator.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:55:10', '2023-02-13 09:55:10'),
+(235, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":null,\"name\":null,\"email\":\"superadmin@gmail.com\",\"mobile\":null,\"password\":\"superadmin@123\",\"c_password\":null,\"address\":null,\"c_name\":[\"Cleo Horn\"],\"c_mobile\":[null],\"c_email\":[null],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:55:25', '2023-02-13 09:55:25'),
+(236, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":null,\"name\":null,\"email\":\"superadmin@gmail.com\",\"mobile\":null,\"password\":\"superadmin@123\",\"c_password\":null,\"address\":null,\"c_name\":[\"Cleo Horn\"],\"c_mobile\":[null],\"c_email\":[null],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:55:42', '2023-02-13 09:55:42'),
+(237, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":null,\"name\":null,\"email\":\"superadmin@gmail.com\",\"mobile\":null,\"password\":\"superadmin@123\",\"c_password\":null,\"address\":null,\"c_name\":[\"Cleo Horn\"],\"c_mobile\":[null],\"c_email\":[null],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:55:51', '2023-02-13 09:55:51'),
+(238, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 09:56:03', '2023-02-13 09:56:03'),
+(239, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":null,\"name\":null,\"email\":\"superadmin@gmail.com\",\"mobile\":null,\"password\":\"superadmin@123\",\"c_password\":null,\"address\":null,\"c_name\":[null],\"c_mobile\":[null],\"c_email\":[null],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:56:07', '2023-02-13 09:56:07'),
+(240, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":null,\"name\":null,\"email\":\"superadmin@gmail.com\",\"mobile\":null,\"password\":\"superadmin@123\",\"c_password\":null,\"address\":null,\"c_name\":[null],\"c_mobile\":[null],\"c_email\":[null],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:56:15', '2023-02-13 09:56:15'),
+(241, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":null,\"name\":null,\"email\":\"superadmin@gmail.com\",\"mobile\":null,\"password\":\"superadmin@123\",\"c_password\":null,\"address\":null,\"c_name\":[null],\"c_mobile\":[null],\"c_email\":[null],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:56:21', '2023-02-13 09:56:21'),
+(242, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 09:56:23', '2023-02-13 09:56:23'),
+(243, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":null,\"name\":null,\"email\":\"superadmin@gmail.com\",\"mobile\":null,\"password\":\"superadmin@123\",\"c_password\":null,\"address\":null,\"c_name\":[null],\"c_mobile\":[null],\"c_email\":[null],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:56:27', '2023-02-13 09:56:27'),
+(244, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":null,\"name\":null,\"email\":\"superadmin@gmail.com\",\"mobile\":null,\"password\":\"superadmin@123\",\"c_password\":null,\"address\":null,\"c_name\":[null],\"c_mobile\":[null],\"c_email\":[null],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:56:59', '2023-02-13 09:56:59'),
+(245, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 09:57:20', '2023-02-13 09:57:20'),
+(246, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":null,\"name\":null,\"email\":\"superadmin@gmail.com\",\"mobile\":null,\"password\":\"superadmin@123\",\"c_password\":null,\"address\":null,\"c_name\":[null],\"c_mobile\":[null],\"c_email\":[null],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:57:23', '2023-02-13 09:57:23'),
+(247, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":null,\"name\":null,\"email\":\"superadmin@gmail.com\",\"mobile\":null,\"password\":\"superadmin@123\",\"c_password\":null,\"address\":null,\"c_name\":[null],\"c_mobile\":[null],\"c_email\":[null],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 09:57:34', '2023-02-13 09:57:34'),
+(248, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 09:57:55', '2023-02-13 09:57:55'),
+(249, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 09:58:39', '2023-02-13 09:58:39'),
+(250, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 10:01:05', '2023-02-13 10:01:05'),
+(251, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Geraldine Pittman\",\"name\":\"Ora Roy\",\"email\":\"guxulu@mailinator.com\",\"mobile\":\"01708797991\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Dolore doloribus odi\",\"c_name\":[\"Edward Walker\"],\"c_mobile\":[\"01700000000\"],\"c_email\":[\"gekuki@mailinator.com\"],\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 10:01:21', '2023-02-13 10:01:21'),
+(252, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Geraldine Pittman\",\"name\":\"Ora Roy\",\"email\":\"guxfulu@mailinator.com\",\"mobile\":\"01708797991\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Dolore doloribus odi\",\"c_name\":[\"Edward Walker\"],\"c_mobile\":[\"01700000000\"],\"c_email\":[\"gekuki@mailinator.com\"],\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 10:01:37', '2023-02-13 10:01:37'),
+(253, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Geraldine Pittman\",\"name\":\"Ora Roy\",\"email\":\"guxeeefulu@mailinator.com\",\"mobile\":\"01708797991\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Dolore doloribus odi\",\"c_name\":[\"Edward Walker\"],\"c_mobile\":[\"01700000000\"],\"c_email\":[\"gekuki@mailinator.com\"],\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 10:01:56', '2023-02-13 10:01:56'),
+(254, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 10:02:45', '2023-02-13 10:02:45'),
+(255, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"April Griffin\",\"name\":\"Martin Hyde\",\"email\":\"kazorumibu@mailinator.com\",\"mobile\":\"01708797999\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Enim non nulla iste\",\"c_name\":[\"Kimberley Hess\"],\"c_mobile\":[\"01700000000\"],\"c_email\":[\"qobugabyva@mailinator.com\"],\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 10:03:02', '2023-02-13 10:03:02'),
+(256, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"April Griffin\",\"name\":\"Martin Hyde\",\"email\":\"kazorumibu@mailinator.com\",\"mobile\":\"01708797999\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Enim non nulla iste\",\"c_name\":[\"Kimberley Hess\"],\"c_mobile\":[\"01700000000\"],\"c_email\":[\"qobugabyva@mailinator.com\"],\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 10:03:24', '2023-02-13 10:03:24'),
+(257, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"April Griffin\",\"name\":\"Martin Hyde\",\"email\":\"kazorumibuee@mailinator.com\",\"mobile\":\"01708797999\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Enim non nulla iste\",\"c_name\":[\"Kimberley Hess\"],\"c_mobile\":[\"01700000000\"],\"c_email\":[\"qobugabyva@mailinator.com\"],\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 10:03:29', '2023-02-13 10:03:29'),
+(258, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-13 10:25:25', '2023-02-13 10:25:25'),
+(259, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 10:25:26', '2023-02-13 10:25:26'),
+(260, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 10:26:43', '2023-02-13 10:26:43'),
+(261, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-13 10:26:45', '2023-02-13 10:26:45'),
+(262, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 10:26:46', '2023-02-13 10:26:46'),
+(263, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-13 10:26:56', '2023-02-13 10:26:56'),
+(264, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 10:28:12', '2023-02-13 10:28:12'),
+(265, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 10:29:01', '2023-02-13 10:29:01'),
+(266, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 10:29:16', '2023-02-13 10:29:16'),
+(267, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 10:29:26', '2023-02-13 10:29:26'),
+(268, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 10:29:31', '2023-02-13 10:29:31'),
+(269, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 10:29:52', '2023-02-13 10:29:52'),
+(270, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 10:29:59', '2023-02-13 10:29:59'),
+(271, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 10:33:03', '2023-02-13 10:33:03'),
+(272, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 10:35:17', '2023-02-13 10:35:17'),
+(273, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 10:35:28', '2023-02-13 10:35:28'),
+(274, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 10:35:50', '2023-02-13 10:35:50'),
+(275, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 10:36:02', '2023-02-13 10:36:02'),
+(276, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 10:36:38', '2023-02-13 10:36:38'),
+(277, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 10:36:43', '2023-02-13 10:36:43'),
+(278, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 10:36:57', '2023-02-13 10:36:57'),
+(279, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 10:37:17', '2023-02-13 10:37:17'),
+(280, 1, 'admin/employees/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-13 11:37:51', '2023-02-13 11:37:51'),
+(281, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-13 11:37:56', '2023-02-13 11:37:56'),
+(282, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 11:37:57', '2023-02-13 11:37:57'),
+(283, 1, 'admin/employees/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-13 11:38:00', '2023-02-13 11:38:00'),
+(284, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 11:38:01', '2023-02-13 11:38:01'),
+(285, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 11:39:00', '2023-02-13 11:39:00'),
+(286, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 11:40:16', '2023-02-13 11:40:16'),
+(287, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 11:41:46', '2023-02-13 11:41:46'),
+(288, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 11:43:16', '2023-02-13 11:43:16'),
+(289, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 11:44:36', '2023-02-13 11:44:36'),
+(290, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 11:47:36', '2023-02-13 11:47:36'),
+(291, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 11:48:00', '2023-02-13 11:48:00'),
+(292, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 11:48:12', '2023-02-13 11:48:12'),
+(293, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 11:48:32', '2023-02-13 11:48:32'),
+(294, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 11:49:12', '2023-02-13 11:49:12'),
+(295, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 11:50:03', '2023-02-13 11:50:03'),
+(296, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 11:50:27', '2023-02-13 11:50:27'),
+(297, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 11:50:39', '2023-02-13 11:50:39'),
+(298, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 11:50:48', '2023-02-13 11:50:48'),
+(299, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Hilda Mccullough\",\"name\":\"Kelsey Love\",\"email\":\"kalocis@mailinator.com\",\"mobile\":\"0000000\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Aut laudantium ad n\",\"c_name\":[\"Yael Reilly\"],\"c_mobile\":[\"01700000000\"],\"c_email\":[\"nyxir@mailinator.com\"],\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 11:51:17', '2023-02-13 11:51:17'),
+(300, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Hilda Mccullough\",\"name\":\"Kelsey Love\",\"email\":\"kalocis@mailinator.com\",\"mobile\":\"0000000000\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Aut laudantium ad n\",\"c_name\":[\"Yael Reilly\"],\"c_mobile\":[\"01700000000\"],\"c_email\":[\"nyxir@mailinator.com\"],\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 11:51:29', '2023-02-13 11:51:29'),
+(301, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Hilda Mccullough\",\"name\":\"Kelsey Love\",\"email\":\"kalocis@mailinator.com\",\"mobile\":\"0100000000\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Aut laudantium ad n\",\"c_name\":[\"Yael Reilly\"],\"c_mobile\":[\"01700000000\"],\"c_email\":[\"nyxir@mailinator.com\"],\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 11:51:36', '2023-02-13 11:51:36'),
+(302, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Hilda Mccullough\",\"name\":\"Kelsey Love\",\"email\":\"kalocis@mailinator.com\",\"mobile\":\"01700000000\",\"password\":\"Pa$$w0rd!\",\"c_password\":\"Pa$$w0rd!\",\"address\":\"Aut laudantium ad n\",\"c_name\":[\"Yael Reilly\"],\"c_mobile\":[\"01700000000\"],\"c_email\":[\"nyxir@mailinator.com\"],\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 11:51:41', '2023-02-13 11:51:41'),
+(303, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-13 11:51:48', '2023-02-13 11:51:48'),
+(304, 1, 'admin/employees/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-13 11:53:11', '2023-02-13 11:53:11'),
+(305, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 11:53:45', '2023-02-13 11:53:45'),
+(306, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-13 11:53:46', '2023-02-13 11:53:46'),
+(307, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 11:54:20', '2023-02-13 11:54:20'),
+(308, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 11:55:09', '2023-02-13 11:55:09'),
+(309, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 11:55:32', '2023-02-13 11:55:32'),
+(310, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 11:55:34', '2023-02-13 11:55:34'),
+(311, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 11:55:39', '2023-02-13 11:55:39'),
+(312, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 11:56:06', '2023-02-13 11:56:06'),
+(313, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 11:56:07', '2023-02-13 11:56:07'),
+(314, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 11:56:10', '2023-02-13 11:56:10'),
+(315, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 11:56:23', '2023-02-13 11:56:23'),
+(316, 1, 'admin/employees/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-13 11:56:26', '2023-02-13 11:56:26'),
+(317, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-13 11:56:48', '2023-02-13 11:56:48'),
+(318, 1, 'admin/employees/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-13 11:56:51', '2023-02-13 11:56:51'),
+(319, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-13 11:57:36', '2023-02-13 11:57:36'),
+(320, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 11:57:37', '2023-02-13 11:57:37'),
+(321, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 11:57:41', '2023-02-13 11:57:41'),
+(322, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 11:58:21', '2023-02-13 11:58:21'),
+(323, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 11:58:25', '2023-02-13 11:58:25'),
+(324, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 11:58:28', '2023-02-13 11:58:28'),
+(325, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 11:58:47', '2023-02-13 11:58:47'),
+(326, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 11:59:22', '2023-02-13 11:59:22'),
+(327, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 11:59:24', '2023-02-13 11:59:24'),
+(328, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-13 12:00:06', '2023-02-13 12:00:06'),
+(329, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 12:00:43', '2023-02-13 12:00:43'),
+(330, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 12:00:44', '2023-02-13 12:00:44'),
+(331, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-13 12:02:31', '2023-02-13 12:02:31'),
+(332, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-13 12:03:45', '2023-02-13 12:03:45'),
+(333, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2023-02-13 12:04:54', '2023-02-13 12:04:54'),
+(334, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-13 12:04:56', '2023-02-13 12:04:56'),
+(335, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 12:06:05', '2023-02-13 12:06:05'),
+(336, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 12:17:32', '2023-02-13 12:17:32'),
+(337, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 12:18:04', '2023-02-13 12:18:04'),
+(338, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 12:18:40', '2023-02-13 12:18:40'),
+(339, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 12:19:46', '2023-02-13 12:19:46'),
+(340, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 12:20:38', '2023-02-13 12:20:38'),
+(341, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-13 12:20:40', '2023-02-13 12:20:40'),
+(342, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 12:20:41', '2023-02-13 12:20:41'),
+(343, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 12:20:42', '2023-02-13 12:20:42'),
+(344, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"MD: Rubel Khan\",\"name\":\"Rubel\",\"email\":\"rubel@gmail.com\",\"password\":\"rubel@123\",\"c_password\":\"rubel@123\",\"address\":\"Mohammadpur, Dhaka\",\"c_name\":[\"MD: Rubel Khan\",\"MD; mamun Khan\"],\"c_mobile\":[\"01700000000\",\"01700000000\"],\"c_email\":[\"rubel@gmail.com\",\"mamun@gmail.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 12:22:40', '2023-02-13 12:22:40'),
+(345, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-13 12:23:27', '2023-02-13 12:23:27'),
+(346, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 12:23:54', '2023-02-13 12:23:54'),
+(347, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 12:25:14', '2023-02-13 12:25:14'),
+(348, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 12:25:30', '2023-02-13 12:25:30'),
+(349, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-13 12:26:04', '2023-02-13 12:26:04'),
+(350, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 12:26:06', '2023-02-13 12:26:06'),
+(351, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Md: Mamun Hossen\",\"name\":\"Mamun\",\"email\":\"mamun@gmail.com\",\"password\":\"mamun@123\",\"c_password\":\"mamun@123\",\"address\":\"Mohammadpur, Dhaka\",\"c_name\":[\"Mamun\",\"Rubel\"],\"c_mobile\":[\"01700000000\",\"01700000000\"],\"c_email\":[\"mamun@gmail.com\",\"rubel@gmail.com\"],\"status\":\"1\",\"_token\":\"a5LACwxeKGe7s4asdA9rDyYzvnlBxOavijIu1JnO\"}', '2023-02-13 12:27:36', '2023-02-13 12:27:36'),
+(352, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 12:27:37', '2023-02-13 12:27:37'),
+(353, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 12:31:33', '2023-02-13 12:31:33'),
+(354, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 12:32:42', '2023-02-13 12:32:42'),
+(355, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 12:32:54', '2023-02-13 12:32:54'),
+(356, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"status\":\"1\"}', '2023-02-13 12:32:58', '2023-02-13 12:32:58'),
+(357, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"status\":\"2\"}', '2023-02-13 12:33:02', '2023-02-13 12:33:02'),
+(358, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"status\":\"2\"}', '2023-02-13 12:36:05', '2023-02-13 12:36:05'),
+(359, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"status\":\"2\"}', '2023-02-13 12:36:07', '2023-02-13 12:36:07'),
+(360, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"status\":\"2\"}', '2023-02-13 12:36:19', '2023-02-13 12:36:19'),
+(361, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"status\":\"1\"}', '2023-02-13 12:36:57', '2023-02-13 12:36:57'),
+(362, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"status\":\"1\"}', '2023-02-13 12:38:06', '2023-02-13 12:38:06'),
+(363, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"status\":\"2\"}', '2023-02-13 12:38:21', '2023-02-13 12:38:21'),
+(364, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"status\":\"1\"}', '2023-02-13 12:38:39', '2023-02-13 12:38:39'),
+(365, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"status\":\"2\"}', '2023-02-13 12:38:41', '2023-02-13 12:38:41'),
+(366, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"status\":\"0\"}', '2023-02-13 12:38:44', '2023-02-13 12:38:44'),
+(367, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"status\":\"0\"}', '2023-02-13 12:39:16', '2023-02-13 12:39:16'),
+(368, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"status\":\"0\"}', '2023-02-13 12:39:27', '2023-02-13 12:39:27'),
+(369, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"status\":\"0\"}', '2023-02-13 12:40:28', '2023-02-13 12:40:28'),
+(370, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"status\":\"0\"}', '2023-02-13 12:43:13', '2023-02-13 12:43:13'),
+(371, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"status\":\"0\"}', '2023-02-13 12:43:28', '2023-02-13 12:43:28'),
+(372, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"status\":\"0\"}', '2023-02-13 12:46:55', '2023-02-13 12:46:55'),
+(373, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"status\":\"1\",\"name\":null}', '2023-02-13 12:47:14', '2023-02-13 12:47:14'),
+(374, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"status\":\"2\",\"name\":null}', '2023-02-13 12:47:17', '2023-02-13 12:47:17'),
+(375, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"status\":\"2\",\"name\":\"Md.Rubel Khan\"}', '2023-02-13 12:47:21', '2023-02-13 12:47:21'),
+(376, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"status\":\"2\",\"name\":\"Md.Rubel Khan\"}', '2023-02-13 12:48:44', '2023-02-13 12:48:44'),
+(377, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"status\":\"2\",\"name\":null}', '2023-02-13 12:48:49', '2023-02-13 12:48:49'),
+(378, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"status\":\"2\",\"name\":\"Rubel\"}', '2023-02-13 12:49:02', '2023-02-13 12:49:02'),
+(379, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"status\":\"2\",\"name\":\"Rubel\"}', '2023-02-13 12:49:04', '2023-02-13 12:49:04'),
+(380, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"status\":\"2\",\"name\":\"MD; mamun Khan\"}', '2023-02-13 12:49:13', '2023-02-13 12:49:13'),
+(381, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"status\":\"2\",\"name\":\"MD; mamun Khan\"}', '2023-02-13 12:49:52', '2023-02-13 12:49:52'),
+(382, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-13 12:49:54', '2023-02-13 12:49:54'),
+(383, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 12:52:46', '2023-02-13 12:52:46'),
+(384, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 12:53:04', '2023-02-13 12:53:04'),
+(385, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 12:53:32', '2023-02-13 12:53:32'),
+(386, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 12:53:47', '2023-02-13 12:53:47'),
+(387, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 12:54:04', '2023-02-13 12:54:04'),
+(388, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 12:54:28', '2023-02-13 12:54:28'),
+(389, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-13 12:55:07', '2023-02-13 12:55:07'),
+(390, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"status\":\"0\",\"name\":\"Mamun\"}', '2023-02-13 12:55:30', '2023-02-13 12:55:30'),
+(391, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"status\":\"0\",\"name\":\"mamun Khan\"}', '2023-02-13 12:55:39', '2023-02-13 12:55:39'),
+(392, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"status\":\"0\",\"name\":null}', '2023-02-13 12:55:46', '2023-02-13 12:55:46'),
+(393, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-13 12:56:02', '2023-02-13 12:56:02'),
+(394, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 12:56:06', '2023-02-13 12:56:06');
 
 -- --------------------------------------------------------
 
@@ -353,7 +597,6 @@ CREATE TABLE `admin_users` (
   `full_name` varchar(190) COLLATE utf8mb4_unicode_ci NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `mobile` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `password` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   `type` tinyint(1) NOT NULL DEFAULT '0' COMMENT '1=admin, 2=employee',
   `status` tinyint(1) NOT NULL DEFAULT '0',
@@ -367,12 +610,11 @@ CREATE TABLE `admin_users` (
 -- Dumping data for table `admin_users`
 --
 
-INSERT INTO `admin_users` (`id`, `full_name`, `name`, `email`, `mobile`, `password`, `type`, `status`, `avatar`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Md. Rubel Khan', 'Super Admin', 'superadmin@gmail.com', '01700000000', '$2y$10$jNGwiLI2PDj27rBlX0/OHeVp6dKGTmoxwo2Za3GbYzsJryzJLr77u', 1, 1, 'images/default-user-avatar.jpg', 'YszpdTNqlDZjz125zZsdadiDQHbML5FKkZqIoAUpQBm73obMOIpHvkAkRtXL', '2023-02-12 03:30:15', '2023-02-12 06:53:47'),
-(2, 'admin', 'Retina Soft', 'admin@gmail.com', '01700000000', '$2y$10$y.OXCBr1hMGyvrirE/RRs.iCcKv8hqXsxVcycAjTj10/G2pRtDxv2', 1, 1, 'images/default-user-avatar.jpg', 'EIgujBqRIXFrM1Nc8T4aXE4I2SB1LqnS9BcQfDX60fw8JhqK5fXwU8R0AfVJ', '2023-02-12 05:34:43', '2023-02-12 05:34:43'),
-(4, 'Gemma Garza', 'Joseph Koch', 'becu@mailinator.com', '01700000000', '$2y$10$cyiBp6PW03msDYquZNwHFeVrsp8bGkBqRH3VsYsAaqYwS80t6ZeOu', 2, 1, NULL, NULL, '2023-02-13 07:10:19', '2023-02-13 07:10:19'),
-(5, 'Gemma Garza', 'Joseph Koch', 'dddd@mailinator.com', '01700000000', '$2y$10$ficAvIMy6KJN8tmz8/kStOU.xqU7ObFwvd/2SelAbV0avVLwQKEoy', 2, 1, NULL, NULL, '2023-02-13 07:10:35', '2023-02-13 07:10:35'),
-(6, 'Gemma Garza', 'Joseph Koch', 'eeeee@mailinator.com', '01700000000', '$2y$10$LIJJpjhXAsY9EHyLm8vDiuZWp7/DwUN0OLsKQH/mFdVRWpI5O4n9a', 2, 1, 'images/1676293846.jpg', NULL, '2023-02-13 07:10:46', '2023-02-13 07:10:46');
+INSERT INTO `admin_users` (`id`, `full_name`, `name`, `email`, `password`, `type`, `status`, `avatar`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'Md. Rubel Khan', 'Super Admin', 'superadmin@gmail.com', '$2y$10$jNGwiLI2PDj27rBlX0/OHeVp6dKGTmoxwo2Za3GbYzsJryzJLr77u', 1, 1, 'images/default-user-avatar.jpg', 'YszpdTNqlDZjz125zZsdadiDQHbML5FKkZqIoAUpQBm73obMOIpHvkAkRtXL', '2023-02-12 03:30:15', '2023-02-12 06:53:47'),
+(2, 'admin', 'Retina Soft', 'admin@gmail.com', '$2y$10$y.OXCBr1hMGyvrirE/RRs.iCcKv8hqXsxVcycAjTj10/G2pRtDxv2', 1, 1, 'images/default-user-avatar.jpg', 'EIgujBqRIXFrM1Nc8T4aXE4I2SB1LqnS9BcQfDX60fw8JhqK5fXwU8R0AfVJ', '2023-02-12 05:34:43', '2023-02-12 05:34:43'),
+(13, 'MD: Rubel Khan', 'Rubel', 'rubel@gmail.com', '$2y$10$gmQ23o9NgVIvbNueQHQ3ZubqTt436qO0FjpemvKur2m9edGO7jiOG', 2, 0, 'images/1676312560.jpg', NULL, '2023-02-13 12:22:40', '2023-02-13 12:22:40'),
+(14, 'Md: Mamun Hossen', 'Mamun', 'mamun@gmail.com', '$2y$10$Sfz1KV9vu0Lnpajxm0/GwOTbQtYzXO7QsapBJhCz6soImNrYws9bC', 2, 1, 'images/1676312857.jpg', NULL, '2023-02-13 12:27:37', '2023-02-13 12:27:37');
 
 -- --------------------------------------------------------
 
@@ -421,6 +663,16 @@ CREATE TABLE `employee_contacts` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `employee_contacts`
+--
+
+INSERT INTO `employee_contacts` (`id`, `employee_id`, `contact_name`, `contact_email`, `contact_phone`, `created_at`, `updated_at`) VALUES
+(1, 13, 'MD: Rubel Khan', '01700000000', 'rubel@gmail.com', '2023-02-13 12:22:40', '2023-02-13 12:22:40'),
+(2, 13, 'MD; mamun Khan', '01700000000', 'mamun@gmail.com', '2023-02-13 12:22:40', '2023-02-13 12:22:40'),
+(3, 14, 'Mamun', '01700000000', 'mamun@gmail.com', '2023-02-13 12:27:37', '2023-02-13 12:27:37'),
+(4, 14, 'Rubel', '01700000000', 'rubel@gmail.com', '2023-02-13 12:27:37', '2023-02-13 12:27:37');
+
 -- --------------------------------------------------------
 
 --
@@ -441,7 +693,8 @@ CREATE TABLE `employee_details` (
 --
 
 INSERT INTO `employee_details` (`id`, `employee_id`, `address`, `photo`, `created_at`, `updated_at`) VALUES
-(1, 6, 'Mohammadpur, Dhaka, Bangladesh', 'images/1676293846.jpg', '2023-02-13 07:10:46', '2023-02-13 07:10:46');
+(1, 13, 'Mohammadpur, Dhaka', 'images/1676312560.jpg', '2023-02-13 12:22:40', '2023-02-13 12:22:40'),
+(2, 14, 'Mohammadpur, Dhaka', 'images/1676312857.jpg', '2023-02-13 12:27:37', '2023-02-13 12:27:37');
 
 -- --------------------------------------------------------
 
@@ -665,7 +918,7 @@ ALTER TABLE `admin_menu`
 -- AUTO_INCREMENT for table `admin_operation_log`
 --
 ALTER TABLE `admin_operation_log`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=152;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=395;
 
 --
 -- AUTO_INCREMENT for table `admin_permissions`
@@ -683,7 +936,7 @@ ALTER TABLE `admin_roles`
 -- AUTO_INCREMENT for table `admin_users`
 --
 ALTER TABLE `admin_users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `employee_attendances`
@@ -695,13 +948,13 @@ ALTER TABLE `employee_attendances`
 -- AUTO_INCREMENT for table `employee_contacts`
 --
 ALTER TABLE `employee_contacts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `employee_details`
 --
 ALTER TABLE `employee_details`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`

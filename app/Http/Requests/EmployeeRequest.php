@@ -28,7 +28,6 @@ class EmployeeRequest extends FormRequest
             'avatar'      => 'required',
             'c_password'  => 'required|same:password',
             'password'    => 'required',
-            'mobile'      => 'required|min:10|max:11|regex:/(01)[0-9]{9}/',
             'email'       => 'required|email|unique:admin_users,email',
             'name'        => 'required|string',
             'full_name'   => 'required|string',

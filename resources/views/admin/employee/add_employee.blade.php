@@ -20,7 +20,7 @@
                             <div class="col-sm-8">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-                                    <input type="text" name="full_name"  class="form-control" placeholder="Enter your full name"> 
+                                    <input type="text" name="full_name"  class="form-control" placeholder="Enter your full name" required> 
                                 </div>
                             </div>
                             @error('full_name')
@@ -32,7 +32,7 @@
                             <div class="col-sm-8">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-                                    <input type="text" name="name"  class="form-control"  placeholder="Enter your first name"> 
+                                    <input type="text" name="name"  class="form-control"  placeholder="Enter your first name" required> 
                                 </div>
                             </div>
                             @error('name')
@@ -44,22 +44,10 @@
                             <div class="col-sm-8">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-                                    <input type="email" name="email"  class="form-control"  placeholder="Enter your email"> 
+                                    <input type="email" name="email"  class="form-control"  placeholder="Enter your email" required> 
                                 </div>
                             </div>
                             @error('email')
-                                <span class="text-danger pb-1">{{ $message }}</span>
-                            @enderror
-                        </div>
-                         <div class="form-group">
-                            <label for="mobile" class="col-sm-2 asterisk control-label">Mobile</label>
-                            <div class="col-sm-8">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-                                    <input type="text" name="mobile"  class="form-control"  placeholder="Enter your mobile number"> 
-                                </div>
-                            </div>
-                            @error('mobile')
                                 <span class="text-danger pb-1">{{ $message }}</span>
                             @enderror
                         </div>
@@ -68,7 +56,7 @@
                             <div class="col-sm-8">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-                                    <input type="password" name="password"  class="form-control"  placeholder="Enter your password"> 
+                                    <input type="password" name="password"  class="form-control"  placeholder="Enter your password" required> 
                                 </div>
                             </div>
                             @error('password')
@@ -80,7 +68,7 @@
                             <div class="col-sm-8">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-                                    <input type="password" name="c_password"  class="form-control"  placeholder="Enter your confirm password"> 
+                                    <input type="password" name="c_password"  class="form-control"  placeholder="Enter your confirm password" required> 
                                 </div>
                             </div>
                             @error('c_password')
@@ -92,7 +80,7 @@
                             <div class="col-sm-8">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-                                    <input type="text" name="address"  class="form-control"  placeholder="Enter your address"> 
+                                    <input type="text" name="address"  class="form-control"  placeholder="Enter your address" required> 
                                 </div>
                             </div>
                             @error('address')
@@ -104,12 +92,39 @@
                             <div class="col-sm-8">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-                                    <input type="file" name="avatar"  class="form-control"> 
+                                    <input type="file" name="avatar"  class="form-control" required> 
                                 </div>
                             </div>
                             @error('avatar')
                                 <span class="text-danger pb-1">{{ $message }}</span>
                             @enderror
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 asterisk control-label">Contacts</label>
+                            <div class="col-sm-8">
+                                <table class="table table-hover" style="margin-bottom: 0px">
+                                    <thead>
+                                        <tr>
+                                            <td style="font-weight:600">Name <span style="color: red">*</span></td>
+                                            <td style="font-weight:600">Mobile <span style="color: red">*</span></td>
+                                            <td style="font-weight:600">Email <span style="color: red">*</span></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="append_field">
+                                        <tr class="file_count">
+                                            <td width="30%"><input type="text"  name="c_name[]"    class="form-control" placeholder="Enter name" required></td>
+                                            <td width="30%"><input type="text"  name="c_mobile[]"  class="form-control" placeholder="Enter mobile" required></td>  
+                                            <td width="30%"><input type="email" name="c_email[]"   class="form-control" placeholder="Enter email" required></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot class="add_field">
+                                        <tr>
+                                           <td><div onclick="add_field()" class="btn btn-success btn-sm"><i class="fa fa-save"></i>&nbsp;New</div></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
                         </div>
                         <div class="form-group">
                             <label for="title" class="col-sm-2 asterisk control-label">Status</label>
@@ -132,7 +147,7 @@
                             <button type="submit" class="btn btn-primary">Save</button>
                         </div>
                         <div class="btn-group pull-left">
-                            {{-- <button type="submit" class="btn btn-success" onclick="form_action(2)">Save & Clear</button> --}}
+                      
                         </div>
                     </div>
                 </div>
@@ -164,6 +179,7 @@
             success: function (response) {
                 button_disable(false);
                 toastr.success(response.message);
+                window.location = "{{ url('/admin/employees') }}";
             },
             error: function(response){   
                 button_disable(false);
@@ -177,4 +193,26 @@
     function button_disable(status){
         $('.btn-primary').attr('disabled', status);
     }
+    let count = 1;
+    function add_field(){
+       $('.append_field').append(`<tr class="file_count">
+            <td width="30%"><input type="text"   name="c_name[]"    class="form-control" placeholder="Enter name"   required></td>
+            <td width="30%"><input type="text"   name="c_mobile[]"  class="form-control" placeholder="Enter mobile" required></td>  
+            <td width="30%"><input type="email"  name="c_email[]"   class="form-control" placeholder="Enter email"  required></td>
+            <td><div class="remove_field btn btn-danger btn-sm"><i class="fa fa-trash">&nbsp;</i>Remove</div></td>  
+        </tr>`);
+        // Count increment
+        count++;
+        if(count == 2){
+            $('.add_field').css('display', 'none');
+        } 
+        return true;
+    }
+    // Remove pricing field 
+    $('.append_field').on('click', '.remove_field', function () {
+        count = count - 1;
+        $(this).closest('.file_count').remove();
+        $('.add_field').css('display', 'block');
+        return true;
+    });
 </script>
