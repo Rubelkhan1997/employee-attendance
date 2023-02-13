@@ -12,7 +12,7 @@
                 </div>
             </div>
             <!-- form start -->
-            <form action="{{ url('/admin/employees/store') }}" method="post" class="form-horizontal add-post-form" accept-charset="UTF-8" enctype="multipart/form-data">
+            <form action="{{ url('/admin/employees') }}" method="post" class="form-horizontal add-post-form" accept-charset="UTF-8" enctype="multipart/form-data">
                 <div class="box-body">
                     <div class="col-md-12">
                         <div class="form-group">
@@ -20,7 +20,7 @@
                             <div class="col-sm-8">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-                                    <input type="text" name="full_name"  class="form-control" placeholder="Enter your full name"  required> 
+                                    <input type="text" name="full_name"  class="form-control" placeholder="Enter your full name"> 
                                 </div>
                             </div>
                             @error('full_name')
@@ -32,7 +32,7 @@
                             <div class="col-sm-8">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-                                    <input type="text" name="name"  class="form-control"  placeholder="Enter your first name" required> 
+                                    <input type="text" name="name"  class="form-control"  placeholder="Enter your first name"> 
                                 </div>
                             </div>
                             @error('name')
@@ -44,10 +44,22 @@
                             <div class="col-sm-8">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-                                    <input type="email" name="email"  class="form-control"  placeholder="Enter your email" required> 
+                                    <input type="email" name="email"  class="form-control"  placeholder="Enter your email"> 
                                 </div>
                             </div>
                             @error('email')
+                                <span class="text-danger pb-1">{{ $message }}</span>
+                            @enderror
+                        </div>
+                         <div class="form-group">
+                            <label for="mobile" class="col-sm-2 asterisk control-label">Mobile</label>
+                            <div class="col-sm-8">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
+                                    <input type="text" name="mobile"  class="form-control"  placeholder="Enter your mobile number"> 
+                                </div>
+                            </div>
+                            @error('mobile')
                                 <span class="text-danger pb-1">{{ $message }}</span>
                             @enderror
                         </div>
@@ -56,7 +68,7 @@
                             <div class="col-sm-8">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-                                    <input type="password" name="password"  class="form-control"  placeholder="Enter your password" required> 
+                                    <input type="password" name="password"  class="form-control"  placeholder="Enter your password"> 
                                 </div>
                             </div>
                             @error('password')
@@ -68,22 +80,10 @@
                             <div class="col-sm-8">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-                                    <input type="password" name="c_password"  class="form-control"  placeholder="Enter your confirm password" required> 
+                                    <input type="password" name="c_password"  class="form-control"  placeholder="Enter your confirm password"> 
                                 </div>
                             </div>
                             @error('c_password')
-                                <span class="text-danger pb-1">{{ $message }}</span>
-                            @enderror
-                        </div>
-                        <div class="form-group">
-                            <label for="mobile" class="col-sm-2 control-label">Mobile</label>
-                            <div class="col-sm-8">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-                                    <input type="text" name="mobile"  class="form-control"  placeholder="Enter your mobile number" required> 
-                                </div>
-                            </div>
-                            @error('mobile')
                                 <span class="text-danger pb-1">{{ $message }}</span>
                             @enderror
                         </div>
@@ -92,7 +92,7 @@
                             <div class="col-sm-8">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-                                    <input type="text" name="address"  class="form-control"  placeholder="Enter your address" required> 
+                                    <input type="text" name="address"  class="form-control"  placeholder="Enter your address"> 
                                 </div>
                             </div>
                             @error('address')
@@ -100,14 +100,14 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="photo" class="col-sm-2  control-label">Photo</label>
+                            <label for="avatar" class="col-sm-2 asterisk control-label">Image</label>
                             <div class="col-sm-8">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-                                    <input type="file" name="photo"  class="form-control" required> 
+                                    <input type="file" name="avatar"  class="form-control"> 
                                 </div>
                             </div>
-                            @error('photo')
+                            @error('avatar')
                                 <span class="text-danger pb-1">{{ $message }}</span>
                             @enderror
                         </div>
@@ -143,38 +143,8 @@
 
 <script>
 	$(function(){
-        $('.subject-select2').select2({
-			placeholder: 'Subject',
-			allowClear: true
-		});
-        $('.sub-subject-select2').select2({
-			placeholder: 'Sub Subject',
-			allowClear: true
-		});
-        $('.date_picker').datetimepicker({format : "YYYY-MM"});
         $("input[name=status]").bootstrapSwitch({size:'small', onText: 'ON', offText: 'OFF'});
 	});
-    // Changing the subject will execute the function
-    function subject_change(subject_id){
-        // subject select2 empty
-        $(".sub-subject-select2").html("");
-        // Ajax call for subject
-        if(subject_id){
-            $.ajax({
-                type: "GET",
-                url: "{{ url('/api/sub-subject-by-subject') }}",
-                data: { 'subject_id': subject_id},
-                dataType: 'json',
-                success: function (result) {
-                    $('.sub-subject-select2').append(`<option value="">Select sub subject</option>`);
-                    $.each(result, function(index, subject) {
-                        $('.sub-subject-select2').append(`<option value="${index}">${subject}</option>`);
-                    });
-                }
-            });
-        }
-        return true;
-	}
     // Add post form 
     $('.add-post-form').on('submit',function(e){
         e.preventDefault();    
@@ -193,12 +163,7 @@
             dataType: 'json',
             success: function (response) {
                 button_disable(false);
-                if(response.route != null){
-                    window.location = response.route;
-                    toastr.success(response.message);
-                }else{
-                    toastr.error(response.message);
-                }
+                toastr.success(response.message);
             },
             error: function(response){   
                 button_disable(false);

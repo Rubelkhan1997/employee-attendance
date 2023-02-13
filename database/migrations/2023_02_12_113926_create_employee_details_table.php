@@ -16,8 +16,6 @@ class CreateEmployeeDetailsTable extends Migration
         Schema::create('employee_details', function (Blueprint $table) {
             $table->id();
             $table->foreignId('employee_id')->index();
-            $table->foreignId('district_id')->index();
-            $table->foreignId('upazila_id')->index();
             $table->text('address');
             $table->string('photo');
             $table->timestamps();
