@@ -51,3 +51,7 @@ function login_role_slugs(){
    }
    return $slugs;
 }
+function admin_check(){
+   return in_array("administrator", login_role_slugs()) || in_array("admin", login_role_slugs());
+}
+

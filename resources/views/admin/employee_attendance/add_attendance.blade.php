@@ -17,23 +17,32 @@
                     <div class="col-md-12">
                         @if (in_array("administrator", login_role_slugs()) || in_array("admin", login_role_slugs()))
                             <div class="form-group">
-                            <label for="employee_id" class="col-sm-2 asterisk control-label">Employee</label>
-                            <div class="col-sm-8">
-                                <select name="employee_id" class="form-control employee-select2" >
-                                    <option selected value="">Select the employee</option>
-                                    @foreach ($employees as $key => $employee)
-                                        <option value="{{ $key }}" @selected(old('employee_id') == $key)>{{ $employee }}</option>
-                                    @endforeach
-                                </select>
+                                <label for="employee_id" class="col-sm-2 asterisk control-label">Employee</label>
+                                <div class="col-sm-8">
+                                    <select name="employee_id" class="form-control employee-select2" >
+                                        <option selected value="">Select the employee</option>
+                                        @foreach ($employees as $key => $employee)
+                                            <option value="{{ $key }}" @selected(old('employee_id') == $key)>{{ $employee }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
                             </div>
-                        </div>
+                            <div class="form-group">
+                                <label for="date" class="col-sm-2 asterisk control-label">Date</label>
+                                <div class="col-sm-8">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
+                                        <input type="text" name="date" value="{{ date('Y-m-d') }}" class="form-control date_picker"> 
+                                    </div>
+                                </div>
+                            </div>
                         @endif
                         <div class="form-group">
                             <label for="in_time" class="col-sm-2 asterisk control-label">In Time</label>
                             <div class="col-sm-8">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-                                    <input type="text" name="in_time" value="09:00"  class="form-control date_picker"> 
+                                    <input type="text" name="in_time" value="09:00"  class="form-control time_picker"> 
                                 </div>
                             </div>
                             @error('in_time')
@@ -45,7 +54,7 @@
                             <div class="col-sm-8">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-                                    <input type="text" name="out_time" value="{{ date('H:i') }}" class="form-control date_picker"> 
+                                    <input type="text" name="out_time" value="{{ date('H:i') }}" class="form-control time_picker"> 
                                 </div>
                             </div>
                             @error('out_time')
@@ -80,7 +89,11 @@
 			allowClear: true
 		});
         $("input[name=status]").bootstrapSwitch({size:'small', onText: 'ON', offText: 'OFF'});
-        $('.date_picker').datetimepicker({format: "HH:mm:ss"});
+        $('.date_picker').datetimepicker({
+            format: "YYYY-MM-DD",
+            maxDate: new Date(),
+        });
+        $('.time_picker').datetimepicker({format: "HH:mm:ss"});
 	});
     // Add attendance form 
     $('.add-attendance-form').on('submit',function(e){

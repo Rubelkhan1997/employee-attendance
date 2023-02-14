@@ -13,21 +13,30 @@ class EmployeeAttendanceController extends Controller
 {
     public function index(Content $content, Request $request)
     {
-        $name   = $request->name;
-        $status = $request->status;
+        $date  = $request->date;
+        $em_id = $request->employee_id;
         // Query
-        if(in_array("administrator", login_role_slugs()) || in_array("admin", login_role_slugs())){
+        if(admin_check()){
             $query = EmployeeAttendance::query();
+            if($em_id){
+                $query->where('employee_id', $em_id);
+            }
         }else{
             $query = EmployeeAttendance::where('employee_id', Admin::user()->id);
         }
+        if($date){
+            $query->where('date', '>=', $date)->where('date', '<=', $date);
+        }else{
+            $query->where('date', '>=', date('01-M-Y'))->where('date', '<=', date('t-M-Y'));
+        }
         // 
-        $employees = $query->where('date', '>=', date('01-M-Y'))->where('date', '<=', date('t-M-Y'))->orderBy('id', 'DESC')->get();
+        $employees   = AdminUser::where('type', 2)->pluck('full_name', 'id')->toArray();
+        $attendances = $query->orderBy('id', 'DESC')->get();
                                 
         return $content
             ->title('Attendance')
             ->description('List')
-            ->view('admin.employee_attendance.list_attendance', compact('employees'));
+            ->view('admin.employee_attendance.list_attendance', compact('employees', 'attendances'));
     }
     public function create(Content $content)
     {
@@ -44,16 +53,17 @@ class EmployeeAttendanceController extends Controller
             'out_time' => 'required|date_format:H:i:s',
             'in_time'  => 'required|date_format:H:i:s',
         ]);
-        $date        = date('Y-m-d');
+        $date        = $request->input('date')? $request->input('date'): date('Y-m-d');
         $employee_id = $request->input('employee_id');
         // validator
         if($validator->fails()){
             return response()->json(['status' => 0, 'errors' => $validator->errors()], 404);
         }
         else{
-            if((in_array("administrator", login_role_slugs()) || in_array("admin", login_role_slugs())) && empty($employee_id)){
+            if(admin_check() && empty($employee_id)){
                 return response()->json(['status' => 0, 'errors' => ["Select the employee."]], 404);
             }
+            $employee_id = $employee_id? $employee_id: Admin::user()->id;
             if(EmployeeAttendance::where(['employee_id' => $employee_id, 'date' => $date])->exists()){
                 return response()->json(['status' => 0, 'errors' => ["You have already given attendances."]], 404);
             }

@@ -15,17 +15,20 @@
 					<div class="col-sm-10">
 						<form action="{{ url('/admin/attendances') }}" method="get">
 							<div class="row">
+								@if (admin_check())
+									<div class="col-xs-12 col-sm-3 mb-5">
+										<select name="employee_id" class="form-control employee-select2" >
+											<option selected value="">Select the employee</option>
+											@foreach ($employees as $key => $employee)
+												<option value="{{ $key }}">{{ $employee }}</option>
+											@endforeach
+										</select>
+									</div>
+								@endif
 								<div class="col-xs-12 col-sm-3 mb-5">
-									<select name="status" class="form-control status-select2">
-										<option value="0">All</option>
-										<option value="1">Active</option>
-										<option value="2">In-Active</option>
-									</select>
+									<input type="text" name="date" value="{{ Request::get('date') }}" placeholder="Select a date" class="form-control date_picker">
 								</div>
 								<div class="col-xs-12 col-sm-3 mb-5">
-									<input type="text" name="name" value="{{ Request::get('name') }}" class="form-control" placeholder="Search Full Name/Contact Name">
-								</div>
-								<div class="col-xs-12 col-sm-2 mb-5">
 									<button type="submit" class="btn btn-success">Submit</button>
 									<a href="{{ url('/admin/attendances') }}" class="btn btn-primary">Clear</a>
 								</div>
@@ -45,7 +48,9 @@
 						<thead>
 							<tr>
 								<th>SL</th>
-								<th>Employee</th>
+								@if (admin_check())
+									<th>Employee</th>
+								@endif
 								<th>Date</th>
 								<th>In Time</th>
 								<th>Out Time</th>
@@ -54,15 +59,17 @@
 							</tr>
 						</thead>
 						<tbody>
-							@foreach($employees as $em)
+							@foreach($attendances as $attend)
 								<tr>
 									<td>{{ $loop->iteration }}</td>
-									<td>{{ @$em->employee->full_name }}</td>
-									<td>{{ $em->date }}</td>
-									<td>{{ $em->in_time }}</td>
-									<td>{{ $em->out_time }}</td>
-									<td>{{ $em->stay_time }}</td>
-									<td>{{ $em->status }}</td>
+									@if (admin_check())
+										<td>{{ @$attend->employee->full_name }}</td>
+									@endif
+									<td>{{ $attend->date }}</td>
+									<td>{{ $attend->in_time }}</td>
+									<td>{{ $attend->out_time }}</td>
+									<td>{{ $attend->stay_time }}</td>
+									<td>{{ $attend->status }}</td>
 								</tr>
 							@endforeach
 						</tbody>
@@ -74,14 +81,17 @@
 </div>
 
 <script>
-	let status  = "{{ Request::get('status') }}";
+	let employee_id  = "{{ Request::get('employee_id') }}";
 	$(function(){
-		$('.status-select2').select2({
-			placeholder: 'All',
+		$('.employee-select2').select2({
+            placeholder: 'Select the employee',
 			allowClear: true
 		});
-
-		if(status){$('.status-select2').val(status).trigger('change')}
+		$('.date_picker').datetimepicker({
+            format: "YYYY-MM-DD",
+            maxDate: new Date(),
+        });
+		if(employee_id){$('.employee-select2').val(employee_id).trigger('change')}
 	});
 	function create(url){
 		window.location.href = url;
