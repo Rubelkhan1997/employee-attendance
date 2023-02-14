@@ -27,3 +27,12 @@ function password_validation($employee_id, $password, $c_password)
 
    return ['status' => 1, 'message' => 'Success']; 
 }
+function stay_time($in_time, $out_time){
+   $datetime1 = new \DateTime($in_time);
+   $datetime2 = new \DateTime($out_time);
+   $interval  = $datetime1->diff($datetime2);
+   $stay_time = $interval->format('%H:%I:%S');
+   $hour      = $interval->format('%H');
+
+   return ['time' => $stay_time, 'hour' => $hour];
+}

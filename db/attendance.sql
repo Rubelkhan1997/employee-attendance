@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Feb 14, 2023 at 05:50 AM
+-- Generation Time: Feb 14, 2023 at 12:03 PM
 -- Server version: 5.7.40
 -- PHP Version: 7.4.19
 
@@ -45,13 +45,14 @@ CREATE TABLE `admin_menu` (
 
 INSERT INTO `admin_menu` (`id`, `parent_id`, `order`, `title`, `icon`, `uri`, `permission`, `created_at`, `updated_at`) VALUES
 (1, 0, 1, 'Dashboard', 'fa-bar-chart', '/', NULL, NULL, '2023-02-12 04:17:06'),
-(2, 0, 3, 'Admin', 'fa-tasks', '', NULL, NULL, '2023-02-12 05:36:19'),
-(3, 2, 4, 'Users', 'fa-users', 'auth/users', NULL, NULL, '2023-02-12 05:36:19'),
-(4, 2, 5, 'Roles', 'fa-user', 'auth/roles', NULL, NULL, '2023-02-12 05:36:19'),
-(5, 2, 6, 'Permission', 'fa-ban', 'auth/permissions', NULL, NULL, '2023-02-12 05:36:19'),
-(6, 2, 7, 'Menu', 'fa-bars', 'auth/menu', NULL, NULL, '2023-02-12 05:36:19'),
-(7, 2, 8, 'Operation log', 'fa-history', 'auth/logs', NULL, NULL, '2023-02-12 05:36:19'),
-(8, 0, 2, 'Employees', 'fa-users', 'employees', NULL, '2023-02-12 05:36:15', '2023-02-12 05:36:19');
+(2, 0, 4, 'Admin', 'fa-tasks', '', NULL, NULL, '2023-02-14 03:54:00'),
+(3, 2, 5, 'Users', 'fa-users', 'auth/users', NULL, NULL, '2023-02-14 03:54:00'),
+(4, 2, 6, 'Roles', 'fa-user', 'auth/roles', NULL, NULL, '2023-02-14 03:54:00'),
+(5, 2, 7, 'Permission', 'fa-ban', 'auth/permissions', NULL, NULL, '2023-02-14 03:54:00'),
+(6, 2, 8, 'Menu', 'fa-bars', 'auth/menu', NULL, NULL, '2023-02-14 03:54:00'),
+(7, 2, 9, 'Operation log', 'fa-history', 'auth/logs', NULL, NULL, '2023-02-14 03:54:00'),
+(8, 0, 2, 'Employees', 'fa-users', 'employees', NULL, '2023-02-12 05:36:15', '2023-02-14 03:55:02'),
+(9, 0, 3, 'Attendances', 'fa-adjust', 'attendances', NULL, '2023-02-14 03:53:55', '2023-02-14 11:19:33');
 
 -- --------------------------------------------------------
 
@@ -499,7 +500,208 @@ INSERT INTO `admin_operation_log` (`id`, `user_id`, `path`, `method`, `ip`, `inp
 (421, 1, 'admin/employees/14/edit', 'GET', '127.0.0.1', '[]', '2023-02-13 23:21:31', '2023-02-13 23:21:31'),
 (422, 1, 'admin/employees/14/edit', 'GET', '127.0.0.1', '[]', '2023-02-13 23:46:50', '2023-02-13 23:46:50'),
 (423, 1, 'admin/employees/14/edit', 'GET', '127.0.0.1', '[]', '2023-02-13 23:47:50', '2023-02-13 23:47:50'),
-(424, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 23:50:15', '2023-02-13 23:50:15');
+(424, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-13 23:50:15', '2023-02-13 23:50:15'),
+(425, 1, 'admin/employees/13/edit', 'GET', '127.0.0.1', '[]', '2023-02-14 03:42:01', '2023-02-14 03:42:01'),
+(426, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-14 03:42:29', '2023-02-14 03:42:29'),
+(427, 1, 'admin/employees/4/edit', 'GET', '127.0.0.1', '[]', '2023-02-14 03:42:31', '2023-02-14 03:42:31'),
+(428, 1, 'admin/employees/3/edit', 'GET', '127.0.0.1', '[]', '2023-02-14 03:42:34', '2023-02-14 03:42:34'),
+(429, 1, 'admin/employees/3/edit', 'GET', '127.0.0.1', '[]', '2023-02-14 03:43:13', '2023-02-14 03:43:13'),
+(430, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"MD: Rubel Khan\",\"name\":\"Rubel\",\"email\":\"rubel@gmail.com\",\"password\":null,\"c_password\":null,\"address\":\"Mohammadpur, Dhaka\",\"c_name\":[\"Shohel\",\"Imran\"],\"c_mobile\":[\"01700000100\",\"01710000000\"],\"c_email\":[\"shohel@gmail.com\",\"imran@gmail.com\"],\"status\":\"0\",\"_token\":\"20ZYQF7ps6cqxgCo6Vbzz6JjOU3WzX6SzX1YtjJv\",\"id\":\"3\"}', '2023-02-14 03:43:18', '2023-02-14 03:43:18'),
+(431, 1, 'admin/employees/3/edit', 'GET', '127.0.0.1', '[]', '2023-02-14 03:45:02', '2023-02-14 03:45:02'),
+(432, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"MD: Rubel Khan\",\"name\":\"Rubel\",\"email\":\"rubel@gmail.com\",\"password\":null,\"c_password\":null,\"address\":\"Mohammadpur, Dhaka\",\"c_name\":[\"Shohel\",\"Imran\"],\"c_mobile\":[\"01700000100\",\"01710000000\"],\"c_email\":[\"shohel@gmail.com\",\"imran@gmail.com\"],\"status\":\"0\",\"_token\":\"20ZYQF7ps6cqxgCo6Vbzz6JjOU3WzX6SzX1YtjJv\",\"id\":\"3\"}', '2023-02-14 03:45:14', '2023-02-14 03:45:14'),
+(433, 1, 'admin/employees/3/edit', 'GET', '127.0.0.1', '[]', '2023-02-14 03:45:27', '2023-02-14 03:45:27'),
+(434, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"MD: Rubel Khan\",\"name\":\"Rubel\",\"email\":\"rubel@gmail.com\",\"password\":null,\"c_password\":null,\"address\":\"Mohammadpur, Dhaka\",\"c_name\":[\"Shohel\",\"Imran\"],\"c_mobile\":[\"01700000100\",\"01710000000\"],\"c_email\":[\"shohel@gmail.com\",\"imran@gmail.com\"],\"status\":\"1\",\"_token\":\"20ZYQF7ps6cqxgCo6Vbzz6JjOU3WzX6SzX1YtjJv\",\"id\":\"3\"}', '2023-02-14 03:45:31', '2023-02-14 03:45:31'),
+(435, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"MD: Rubel Khan\",\"name\":\"Rubel\",\"email\":\"rubel@gmail.com\",\"password\":null,\"c_password\":null,\"address\":\"Mohammadpur, Dhaka\",\"c_name\":[\"Shohel\"],\"c_mobile\":[\"01700000100\"],\"c_email\":[\"shohel@gmail.com\"],\"status\":\"1\",\"_token\":\"20ZYQF7ps6cqxgCo6Vbzz6JjOU3WzX6SzX1YtjJv\",\"id\":\"3\"}', '2023-02-14 03:45:50', '2023-02-14 03:45:50'),
+(436, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"MD: Rubel Khan\",\"name\":\"Rubel\",\"email\":\"rubel@gmail.com\",\"password\":null,\"c_password\":null,\"address\":\"Adabor-12, Mohammadpur, Dhaka\",\"c_name\":[\"Shohel\"],\"c_mobile\":[\"01700000100\"],\"c_email\":[\"shohel@gmail.com\"],\"status\":\"1\",\"_token\":\"20ZYQF7ps6cqxgCo6Vbzz6JjOU3WzX6SzX1YtjJv\",\"id\":\"3\"}', '2023-02-14 03:46:08', '2023-02-14 03:46:08'),
+(437, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"MD: Rubel Khan\",\"name\":\"Rubel\",\"email\":\"rubel@gmail.com\",\"password\":null,\"c_password\":null,\"address\":\"Adabor-12, Mohammadpur, Dhaka\",\"c_name\":[\"Shohel\"],\"c_mobile\":[\"01700000100\"],\"c_email\":[\"shohel@gmail.com\"],\"status\":\"1\",\"_token\":\"20ZYQF7ps6cqxgCo6Vbzz6JjOU3WzX6SzX1YtjJv\",\"id\":\"3\"}', '2023-02-14 03:48:42', '2023-02-14 03:48:42'),
+(438, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"MD: Rubel Khan\",\"name\":\"Rubel\",\"email\":\"rubel@gmail.com\",\"password\":null,\"c_password\":null,\"address\":\"Adabor-12, Mohammadpur, Dhaka\",\"c_name\":[\"Shohel\"],\"c_mobile\":[\"01700000100\"],\"c_email\":[\"shohel@gmail.com\"],\"status\":\"1\",\"_token\":\"20ZYQF7ps6cqxgCo6Vbzz6JjOU3WzX6SzX1YtjJv\",\"id\":\"3\"}', '2023-02-14 03:49:00', '2023-02-14 03:49:00'),
+(439, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"MD: Rubel Khan\",\"name\":\"Rubel\",\"email\":\"rubel@gmail.com\",\"password\":null,\"c_password\":null,\"address\":\"Adabor-12, Mohammadpur, Dhaka\",\"c_name\":[\"Shohel\"],\"c_mobile\":[\"01700000100\"],\"c_email\":[\"shohel@gmail.com\"],\"status\":\"1\",\"_token\":\"20ZYQF7ps6cqxgCo6Vbzz6JjOU3WzX6SzX1YtjJv\",\"id\":\"3\"}', '2023-02-14 03:49:54', '2023-02-14 03:49:54'),
+(440, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 03:49:56', '2023-02-14 03:49:56'),
+(441, 1, 'admin/employees/4/edit', 'GET', '127.0.0.1', '[]', '2023-02-14 03:49:59', '2023-02-14 03:49:59'),
+(442, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Md: Mamun Hossen\",\"name\":\"Mamun\",\"email\":\"mamun@gmail.com\",\"password\":null,\"c_password\":null,\"address\":\"Mohammadpur, Dhaka\",\"c_name\":[\"Rana\",\"Kawsir\"],\"c_mobile\":[\"01700000001\",\"01700000000\"],\"c_email\":[\"rana@gmail.com\",\"kawsir@gmail.com\"],\"status\":\"1\",\"_token\":\"20ZYQF7ps6cqxgCo6Vbzz6JjOU3WzX6SzX1YtjJv\",\"id\":\"4\"}', '2023-02-14 03:50:02', '2023-02-14 03:50:02'),
+(443, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-14 03:50:03', '2023-02-14 03:50:03'),
+(444, 1, 'admin/employees/4/edit', 'GET', '127.0.0.1', '[]', '2023-02-14 03:50:25', '2023-02-14 03:50:25'),
+(445, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Md: Mamun Hossen\",\"name\":\"Mamun\",\"email\":\"mamun@gmail.com\",\"password\":\"mamun@123\",\"c_password\":\"mamun@123\",\"address\":\"Mohammadpur, Dhaka\",\"c_name\":[\"Rana\",\"Kawsir\"],\"c_mobile\":[\"01700000001\",\"01700000000\"],\"c_email\":[\"rana@gmail.com\",\"kawsir@gmail.com\"],\"status\":\"1\",\"_token\":\"20ZYQF7ps6cqxgCo6Vbzz6JjOU3WzX6SzX1YtjJv\",\"id\":\"4\"}', '2023-02-14 03:50:34', '2023-02-14 03:50:34'),
+(446, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-14 03:50:35', '2023-02-14 03:50:35'),
+(447, 4, 'admin', 'GET', '127.0.0.1', '[]', '2023-02-14 03:50:51', '2023-02-14 03:50:51'),
+(448, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-14 03:52:40', '2023-02-14 03:52:40'),
+(449, 1, 'admin/employees/3/edit', 'GET', '127.0.0.1', '[]', '2023-02-14 03:52:41', '2023-02-14 03:52:41'),
+(450, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"MD: Rubel Khan\",\"name\":\"Rubel\",\"email\":\"rubel@gmail.com\",\"password\":null,\"c_password\":null,\"address\":\"Adabor-12, Mohammadpur, Dhaka\",\"c_name\":[\"Shohel\"],\"c_mobile\":[\"01700000100\"],\"c_email\":[\"shohel@gmail.com\"],\"status\":\"1\",\"_token\":\"20ZYQF7ps6cqxgCo6Vbzz6JjOU3WzX6SzX1YtjJv\",\"id\":\"3\"}', '2023-02-14 03:52:50', '2023-02-14 03:52:50'),
+(451, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-14 03:52:51', '2023-02-14 03:52:51'),
+(452, 1, 'admin/employees/4/edit', 'GET', '127.0.0.1', '[]', '2023-02-14 03:52:54', '2023-02-14 03:52:54'),
+(453, 1, 'admin/employees', 'POST', '127.0.0.1', '{\"full_name\":\"Md: Mamun Hossen\",\"name\":\"Mamun\",\"email\":\"mamun@gmail.com\",\"password\":null,\"c_password\":null,\"address\":\"Mohammadpur, Dhaka\",\"c_name\":[\"Rana\",\"Kawsir\"],\"c_mobile\":[\"01700000001\",\"01700000000\"],\"c_email\":[\"rana@gmail.com\",\"kawsir@gmail.com\"],\"status\":\"1\",\"_token\":\"20ZYQF7ps6cqxgCo6Vbzz6JjOU3WzX6SzX1YtjJv\",\"id\":\"4\"}', '2023-02-14 03:52:56', '2023-02-14 03:52:56'),
+(454, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-14 03:52:57', '2023-02-14 03:52:57'),
+(455, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 03:53:24', '2023-02-14 03:53:24'),
+(456, 4, 'admin', 'GET', '127.0.0.1', '[]', '2023-02-14 03:53:32', '2023-02-14 03:53:32'),
+(457, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 03:53:36', '2023-02-14 03:53:36'),
+(458, 1, 'admin/auth/menu', 'POST', '127.0.0.1', '{\"parent_id\":\"0\",\"title\":\"Attendances\",\"icon\":\"fa-bars\",\"uri\":\"attendance\",\"roles\":[\"3\",null],\"_token\":\"20ZYQF7ps6cqxgCo6Vbzz6JjOU3WzX6SzX1YtjJv\"}', '2023-02-14 03:53:55', '2023-02-14 03:53:55'),
+(459, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2023-02-14 03:53:56', '2023-02-14 03:53:56'),
+(460, 1, 'admin/auth/menu', 'POST', '127.0.0.1', '{\"_token\":\"20ZYQF7ps6cqxgCo6Vbzz6JjOU3WzX6SzX1YtjJv\",\"_order\":\"[{\\\"id\\\":1},{\\\"id\\\":9},{\\\"id\\\":8},{\\\"id\\\":2,\\\"children\\\":[{\\\"id\\\":3},{\\\"id\\\":4},{\\\"id\\\":5},{\\\"id\\\":6},{\\\"id\\\":7}]}]\"}', '2023-02-14 03:54:00', '2023-02-14 03:54:00'),
+(461, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 03:54:01', '2023-02-14 03:54:01'),
+(462, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2023-02-14 03:54:03', '2023-02-14 03:54:03'),
+(463, 4, 'admin', 'GET', '127.0.0.1', '[]', '2023-02-14 03:54:08', '2023-02-14 03:54:08'),
+(464, 1, 'admin/auth/menu/9/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 03:54:17', '2023-02-14 03:54:17'),
+(465, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 03:54:51', '2023-02-14 03:54:51'),
+(466, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 03:54:56', '2023-02-14 03:54:56'),
+(467, 1, 'admin/auth/menu', 'POST', '127.0.0.1', '{\"_token\":\"20ZYQF7ps6cqxgCo6Vbzz6JjOU3WzX6SzX1YtjJv\",\"_order\":\"[{\\\"id\\\":1},{\\\"id\\\":8},{\\\"id\\\":9},{\\\"id\\\":2,\\\"children\\\":[{\\\"id\\\":3},{\\\"id\\\":4},{\\\"id\\\":5},{\\\"id\\\":6},{\\\"id\\\":7}]}]\"}', '2023-02-14 03:55:02', '2023-02-14 03:55:02'),
+(468, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 03:55:03', '2023-02-14 03:55:03'),
+(469, 1, 'admin/auth/menu/9/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 03:55:04', '2023-02-14 03:55:04'),
+(470, 1, 'admin/attendance', 'GET', '127.0.0.1', '[]', '2023-02-14 03:59:07', '2023-02-14 03:59:07'),
+(471, 1, 'admin/attendance/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 03:59:11', '2023-02-14 03:59:11');
+INSERT INTO `admin_operation_log` (`id`, `user_id`, `path`, `method`, `ip`, `input`, `created_at`, `updated_at`) VALUES
+(472, 1, 'admin/attendance/create', 'GET', '127.0.0.1', '[]', '2023-02-14 04:00:14', '2023-02-14 04:00:14'),
+(473, 1, 'admin/attendance/create', 'GET', '127.0.0.1', '[]', '2023-02-14 04:00:56', '2023-02-14 04:00:56'),
+(474, 1, 'admin/attendance/create', 'GET', '127.0.0.1', '[]', '2023-02-14 04:01:42', '2023-02-14 04:01:42'),
+(475, 1, 'admin/attendance/create', 'GET', '127.0.0.1', '[]', '2023-02-14 04:01:55', '2023-02-14 04:01:55'),
+(476, 1, 'admin/attendance/create', 'GET', '127.0.0.1', '[]', '2023-02-14 04:01:57', '2023-02-14 04:01:57'),
+(477, 1, 'admin/attendance/create', 'GET', '127.0.0.1', '[]', '2023-02-14 04:02:09', '2023-02-14 04:02:09'),
+(478, 1, 'admin/attendance/create', 'GET', '127.0.0.1', '[]', '2023-02-14 10:02:37', '2023-02-14 10:02:37'),
+(479, 1, 'admin/attendance/create', 'GET', '127.0.0.1', '[]', '2023-02-14 10:03:38', '2023-02-14 10:03:38'),
+(480, 1, 'admin/attendance/create', 'GET', '127.0.0.1', '[]', '2023-02-14 10:06:11', '2023-02-14 10:06:11'),
+(481, 1, 'admin/attendance/create', 'GET', '127.0.0.1', '[]', '2023-02-14 10:06:23', '2023-02-14 10:06:23'),
+(482, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 10:13:45', '2023-02-14 10:13:45'),
+(483, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-14 10:13:52', '2023-02-14 10:13:52'),
+(484, 4, 'admin/attendance', 'GET', '127.0.0.1', '[]', '2023-02-14 10:13:58', '2023-02-14 10:13:58'),
+(485, 1, 'admin/attendance', 'GET', '127.0.0.1', '[]', '2023-02-14 10:14:27', '2023-02-14 10:14:27'),
+(486, 1, 'admin/auth/logout', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 10:14:30', '2023-02-14 10:14:30'),
+(487, 2, 'admin', 'GET', '127.0.0.1', '[]', '2023-02-14 10:14:38', '2023-02-14 10:14:38'),
+(488, 2, 'admin/employees', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 10:14:41', '2023-02-14 10:14:41'),
+(489, 2, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-14 10:14:43', '2023-02-14 10:14:43'),
+(490, 2, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-14 10:14:45', '2023-02-14 10:14:45'),
+(491, 2, 'admin', 'GET', '127.0.0.1', '[]', '2023-02-14 10:14:55', '2023-02-14 10:14:55'),
+(492, 2, 'admin/auth/logout', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 10:14:58', '2023-02-14 10:14:58'),
+(493, 1, 'admin', 'GET', '127.0.0.1', '[]', '2023-02-14 10:15:04', '2023-02-14 10:15:04'),
+(494, 1, 'admin/auth/users', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 10:15:09', '2023-02-14 10:15:09'),
+(495, 1, 'admin/auth/users/2/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 10:15:14', '2023-02-14 10:15:14'),
+(496, 1, 'admin/auth/roles', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 10:15:27', '2023-02-14 10:15:27'),
+(497, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 10:15:29', '2023-02-14 10:15:29'),
+(498, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-14 10:15:31', '2023-02-14 10:15:31'),
+(499, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-14 10:46:03', '2023-02-14 10:46:03'),
+(500, 4, 'admin/attendance', 'GET', '127.0.0.1', '[]', '2023-02-14 10:46:26', '2023-02-14 10:46:26'),
+(501, 4, 'admin/attendance', 'GET', '127.0.0.1', '[]', '2023-02-14 10:47:45', '2023-02-14 10:47:45'),
+(502, 4, 'admin/attendance/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 10:47:47', '2023-02-14 10:47:47'),
+(503, 4, 'admin/attendance', 'POST', '127.0.0.1', '{\"in_time\":\"16:47:47\",\"out_time\":\"16:47:47\",\"stay_time\":\"2023-02-14 16:47:47\",\"date\":\"2023-02-14\",\"status\":null,\"_token\":\"f36lUUKcDcJdnUBRXbPcRYTA8oOYBwiBo5FcJqdR\",\"_previous_\":\"https:\\/\\/employee-attendance.pp\\/admin\\/attendance\"}', '2023-02-14 10:47:51', '2023-02-14 10:47:51'),
+(504, 4, 'admin/attendance/create', 'GET', '127.0.0.1', '[]', '2023-02-14 10:47:52', '2023-02-14 10:47:52'),
+(505, 4, 'admin/attendance', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 10:48:19', '2023-02-14 10:48:19'),
+(506, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-14 10:49:59', '2023-02-14 10:49:59'),
+(507, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-14 10:59:16', '2023-02-14 10:59:16'),
+(508, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-14 11:01:33', '2023-02-14 11:01:33'),
+(509, 1, 'admin/attendance', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 11:01:44', '2023-02-14 11:01:44'),
+(510, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-14 11:01:45', '2023-02-14 11:01:45'),
+(511, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 11:01:53', '2023-02-14 11:01:53'),
+(512, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-14 11:14:49', '2023-02-14 11:14:49'),
+(513, 1, 'admin/attendance', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 11:14:56', '2023-02-14 11:14:56'),
+(514, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-14 11:14:57', '2023-02-14 11:14:57'),
+(515, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 11:15:34', '2023-02-14 11:15:34'),
+(516, 1, 'admin/auth/menu/9/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 11:15:38', '2023-02-14 11:15:38'),
+(517, 1, 'admin/auth/menu/9', 'PUT', '127.0.0.1', '{\"parent_id\":\"0\",\"title\":\"Attendances\",\"icon\":\"fa-bars\",\"uri\":\"employee-attendances\",\"roles\":[\"3\",null],\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\",\"_method\":\"PUT\",\"_previous_\":\"https:\\/\\/employee-attendance.pp\\/admin\\/auth\\/menu\"}', '2023-02-14 11:15:43', '2023-02-14 11:15:43'),
+(518, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2023-02-14 11:15:44', '2023-02-14 11:15:44'),
+(519, 1, 'admin/auth/menu', 'POST', '127.0.0.1', '{\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\",\"_order\":\"[{\\\"id\\\":1},{\\\"id\\\":8},{\\\"id\\\":9},{\\\"id\\\":2,\\\"children\\\":[{\\\"id\\\":3},{\\\"id\\\":4},{\\\"id\\\":5},{\\\"id\\\":6},{\\\"id\\\":7}]}]\"}', '2023-02-14 11:15:50', '2023-02-14 11:15:50'),
+(520, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 11:15:50', '2023-02-14 11:15:50'),
+(521, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2023-02-14 11:15:52', '2023-02-14 11:15:52'),
+(522, 1, 'admin/auth/menu/9/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 11:15:56', '2023-02-14 11:15:56'),
+(523, 1, 'admin/auth/menu/9', 'PUT', '127.0.0.1', '{\"parent_id\":\"0\",\"title\":\"Attendances\",\"icon\":\"fa-adjust\",\"uri\":\"employee-attendances\",\"roles\":[\"3\",null],\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\",\"_method\":\"PUT\",\"_previous_\":\"https:\\/\\/employee-attendance.pp\\/admin\\/auth\\/menu\"}', '2023-02-14 11:16:02', '2023-02-14 11:16:02'),
+(524, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2023-02-14 11:16:02', '2023-02-14 11:16:02'),
+(525, 1, 'admin/auth/menu', 'POST', '127.0.0.1', '{\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\",\"_order\":\"[{\\\"id\\\":1},{\\\"id\\\":8},{\\\"id\\\":9},{\\\"id\\\":2,\\\"children\\\":[{\\\"id\\\":3},{\\\"id\\\":4},{\\\"id\\\":5},{\\\"id\\\":6},{\\\"id\\\":7}]}]\"}', '2023-02-14 11:16:05', '2023-02-14 11:16:05'),
+(526, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 11:16:06', '2023-02-14 11:16:06'),
+(527, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2023-02-14 11:16:08', '2023-02-14 11:16:08'),
+(528, 4, 'admin', 'GET', '127.0.0.1', '[]', '2023-02-14 11:16:23', '2023-02-14 11:16:23'),
+(529, 4, 'admin/employee-attendances', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 11:16:27', '2023-02-14 11:16:27'),
+(530, 4, 'admin', 'GET', '127.0.0.1', '[]', '2023-02-14 11:16:28', '2023-02-14 11:16:28'),
+(531, 1, 'admin/employee-attendances', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 11:16:35', '2023-02-14 11:16:35'),
+(532, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2023-02-14 11:16:35', '2023-02-14 11:16:35'),
+(533, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2023-02-14 11:16:54', '2023-02-14 11:16:54'),
+(534, 1, 'admin/employee-attendances', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 11:16:56', '2023-02-14 11:16:56'),
+(535, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2023-02-14 11:16:57', '2023-02-14 11:16:57'),
+(536, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2023-02-14 11:18:07', '2023-02-14 11:18:07'),
+(537, 1, 'admin/employee-attendances', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 11:18:10', '2023-02-14 11:18:10'),
+(538, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-14 11:18:12', '2023-02-14 11:18:12'),
+(539, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 11:18:16', '2023-02-14 11:18:16'),
+(540, 1, 'admin/employees/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 11:18:19', '2023-02-14 11:18:19'),
+(541, 1, 'admin/employee-attendances', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 11:18:21', '2023-02-14 11:18:21'),
+(542, 1, 'admin/employee-attendances', 'GET', '127.0.0.1', '[]', '2023-02-14 11:18:43', '2023-02-14 11:18:43'),
+(543, 1, 'admin/employee-attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 11:18:45', '2023-02-14 11:18:45'),
+(544, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 11:19:24', '2023-02-14 11:19:24'),
+(545, 1, 'admin/auth/menu/9/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 11:19:28', '2023-02-14 11:19:28'),
+(546, 1, 'admin/auth/menu/9', 'PUT', '127.0.0.1', '{\"parent_id\":\"0\",\"title\":\"Attendances\",\"icon\":\"fa-adjust\",\"uri\":\"attendances\",\"roles\":[\"3\",null],\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\",\"_method\":\"PUT\",\"_previous_\":\"https:\\/\\/employee-attendance.pp\\/admin\\/auth\\/menu\"}', '2023-02-14 11:19:32', '2023-02-14 11:19:32'),
+(547, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2023-02-14 11:19:33', '2023-02-14 11:19:33'),
+(548, 4, 'admin', 'GET', '127.0.0.1', '[]', '2023-02-14 11:19:39', '2023-02-14 11:19:39'),
+(549, 4, 'admin/attendances', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 11:19:41', '2023-02-14 11:19:41'),
+(550, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2023-02-14 11:20:07', '2023-02-14 11:20:07'),
+(551, 1, 'admin/attendances', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 11:20:10', '2023-02-14 11:20:10'),
+(552, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 11:20:13', '2023-02-14 11:20:13'),
+(553, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 11:20:15', '2023-02-14 11:20:15'),
+(554, 1, 'admin/employees/create', 'GET', '127.0.0.1', '[]', '2023-02-14 11:20:26', '2023-02-14 11:20:26'),
+(555, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-14 11:20:30', '2023-02-14 11:20:30'),
+(556, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 11:20:31', '2023-02-14 11:20:31'),
+(557, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 11:20:32', '2023-02-14 11:20:32'),
+(558, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 11:20:33', '2023-02-14 11:20:33'),
+(559, 1, 'admin/employees', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 11:20:44', '2023-02-14 11:20:44'),
+(560, 1, 'admin/attendances', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 11:20:48', '2023-02-14 11:20:48'),
+(561, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 11:20:53', '2023-02-14 11:20:53'),
+(562, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 11:21:12', '2023-02-14 11:21:12'),
+(563, 1, 'admin/attendances', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 11:21:15', '2023-02-14 11:21:15'),
+(564, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 11:21:17', '2023-02-14 11:21:17'),
+(565, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 11:22:02', '2023-02-14 11:22:02'),
+(566, 1, 'admin/attendances', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 11:22:05', '2023-02-14 11:22:05'),
+(567, 1, 'admin/attendances', 'GET', '127.0.0.1', '[]', '2023-02-14 11:22:06', '2023-02-14 11:22:06'),
+(568, 1, 'admin/attendances', 'GET', '127.0.0.1', '[]', '2023-02-14 11:22:08', '2023-02-14 11:22:08'),
+(569, 1, 'admin/attendances', 'GET', '127.0.0.1', '[]', '2023-02-14 11:22:15', '2023-02-14 11:22:15'),
+(570, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 11:22:17', '2023-02-14 11:22:17'),
+(571, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 11:26:07', '2023-02-14 11:26:07'),
+(572, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 11:26:33', '2023-02-14 11:26:33'),
+(573, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 11:26:34', '2023-02-14 11:26:34'),
+(574, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 11:26:47', '2023-02-14 11:26:47'),
+(575, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 11:26:49', '2023-02-14 11:26:49'),
+(576, 4, 'admin/attendances', 'GET', '127.0.0.1', '[]', '2023-02-14 11:27:10', '2023-02-14 11:27:10'),
+(577, 4, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 11:27:12', '2023-02-14 11:27:12'),
+(578, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 11:30:10', '2023-02-14 11:30:10'),
+(579, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 11:31:11', '2023-02-14 11:31:11'),
+(580, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 11:31:45', '2023-02-14 11:31:45'),
+(581, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 11:32:02', '2023-02-14 11:32:02'),
+(582, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 11:32:22', '2023-02-14 11:32:22'),
+(583, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 11:33:04', '2023-02-14 11:33:04'),
+(584, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 11:33:37', '2023-02-14 11:33:37'),
+(585, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"in_time\":\"17:33\",\"out_time\":\"17:33\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 11:33:51', '2023-02-14 11:33:51'),
+(586, 1, 'admin/employees', 'GET', '127.0.0.1', '[]', '2023-02-14 11:33:52', '2023-02-14 11:33:52'),
+(587, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 11:34:21', '2023-02-14 11:34:21'),
+(588, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"in_time\":\"17:34\",\"out_time\":\"17:34\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 11:34:25', '2023-02-14 11:34:25'),
+(589, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 11:35:18', '2023-02-14 11:35:18'),
+(590, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"in_time\":\"09:00\",\"out_time\":\"17:35\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 11:35:26', '2023-02-14 11:35:26'),
+(591, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 11:35:33', '2023-02-14 11:35:33'),
+(592, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"in_time\":\"09:00\",\"out_time\":\"17:35\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 11:35:37', '2023-02-14 11:35:37'),
+(593, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"in_time\":\"00:00\",\"out_time\":\"00:00\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 11:37:40', '2023-02-14 11:37:40'),
+(594, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 11:37:55', '2023-02-14 11:37:55'),
+(595, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"in_time\":null,\"out_time\":null,\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 11:38:00', '2023-02-14 11:38:00'),
+(596, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"in_time\":null,\"out_time\":null,\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 11:38:37', '2023-02-14 11:38:37'),
+(597, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 11:39:15', '2023-02-14 11:39:15'),
+(598, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"in_time\":\"09:00\",\"out_time\":\"17:39\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 11:39:18', '2023-02-14 11:39:18'),
+(599, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"in_time\":\"09:00\",\"out_time\":null,\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 11:39:25', '2023-02-14 11:39:25'),
+(600, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"in_time\":\"09:00\",\"out_time\":\"00:00\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 11:39:30', '2023-02-14 11:39:30'),
+(601, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 11:39:47', '2023-02-14 11:39:47'),
+(602, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"in_time\":\"dddd\",\"out_time\":\"17:39\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 11:39:52', '2023-02-14 11:39:52'),
+(603, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 11:40:00', '2023-02-14 11:40:00'),
+(604, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"in_time\":\"09:00\",\"out_time\":\"17:40\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 11:40:03', '2023-02-14 11:40:03'),
+(605, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"in_time\":\"09:00\",\"out_time\":\"17:40\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 11:43:56', '2023-02-14 11:43:56'),
+(606, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"in_time\":\"09:00\",\"out_time\":\"17:00\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 11:44:06', '2023-02-14 11:44:06'),
+(607, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"in_time\":\"09:00\",\"out_time\":\"17:01\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 11:44:26', '2023-02-14 11:44:26'),
+(608, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"in_time\":\"09:00\",\"out_time\":\"17:01\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 11:46:29', '2023-02-14 11:46:29'),
+(609, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 11:46:54', '2023-02-14 11:46:54'),
+(610, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"in_time\":\"09:00:00\",\"out_time\":\"17:45:58\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 11:47:08', '2023-02-14 11:47:08'),
+(611, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 11:47:25', '2023-02-14 11:47:25'),
+(612, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"in_time\":\"09:00:00\",\"out_time\":\"17:47:00\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 11:47:29', '2023-02-14 11:47:29'),
+(613, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"in_time\":\"09:00:00\",\"out_time\":\"17:47:35\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 11:47:37', '2023-02-14 11:47:37'),
+(614, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 11:48:11', '2023-02-14 11:48:11'),
+(615, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"in_time\":\"09:00:00\",\"out_time\":\"17:48:00\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 11:56:34', '2023-02-14 11:56:34'),
+(616, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"in_time\":\"09:00:00\",\"out_time\":\"17:48:00\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 11:57:12', '2023-02-14 11:57:12'),
+(617, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"in_time\":\"09:00:00\",\"out_time\":\"14:48:00\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 11:57:30', '2023-02-14 11:57:30'),
+(618, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"in_time\":\"09:00:00\",\"out_time\":\"14:48:00\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 12:00:04', '2023-02-14 12:00:04'),
+(619, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"in_time\":\"09:00:00\",\"out_time\":\"14:48:00\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 12:00:18', '2023-02-14 12:00:18'),
+(620, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 12:01:32', '2023-02-14 12:01:32'),
+(621, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"in_time\":\"09:00:00\",\"out_time\":\"18:01:00\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 12:01:38', '2023-02-14 12:01:38'),
+(622, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"in_time\":\"09:00:00\",\"out_time\":\"18:01:00\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 12:03:20', '2023-02-14 12:03:20'),
+(623, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"in_time\":\"09:00:00\",\"out_time\":\"18:01:00\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 12:03:32', '2023-02-14 12:03:32'),
+(624, 1, 'admin/attendances', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 12:03:36', '2023-02-14 12:03:36');
 
 -- --------------------------------------------------------
 
@@ -571,7 +773,8 @@ CREATE TABLE `admin_role_menu` (
 INSERT INTO `admin_role_menu` (`role_id`, `menu_id`, `created_at`, `updated_at`) VALUES
 (1, 2, NULL, NULL),
 (1, 8, NULL, NULL),
-(2, 8, NULL, NULL);
+(2, 8, NULL, NULL),
+(3, 9, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -614,7 +817,9 @@ CREATE TABLE `admin_role_users` (
 
 INSERT INTO `admin_role_users` (`role_id`, `user_id`, `created_at`, `updated_at`) VALUES
 (1, 1, NULL, NULL),
-(2, 2, NULL, NULL);
+(2, 2, NULL, NULL),
+(3, 3, '2023-02-14 03:52:50', '2023-02-14 03:52:50'),
+(3, 4, '2023-02-14 03:52:56', '2023-02-14 03:52:56');
 
 -- --------------------------------------------------------
 
@@ -641,10 +846,10 @@ CREATE TABLE `admin_users` (
 --
 
 INSERT INTO `admin_users` (`id`, `full_name`, `name`, `email`, `password`, `type`, `status`, `avatar`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Md. Rubel Khan', 'Super Admin', 'superadmin@gmail.com', '$2y$10$jNGwiLI2PDj27rBlX0/OHeVp6dKGTmoxwo2Za3GbYzsJryzJLr77u', 1, 1, 'images/default-user-avatar.jpg', 'YszpdTNqlDZjz125zZsdadiDQHbML5FKkZqIoAUpQBm73obMOIpHvkAkRtXL', '2023-02-12 03:30:15', '2023-02-12 06:53:47'),
-(2, 'admin', 'Retina Soft', 'admin@gmail.com', '$2y$10$y.OXCBr1hMGyvrirE/RRs.iCcKv8hqXsxVcycAjTj10/G2pRtDxv2', 1, 1, 'images/default-user-avatar.jpg', 'EIgujBqRIXFrM1Nc8T4aXE4I2SB1LqnS9BcQfDX60fw8JhqK5fXwU8R0AfVJ', '2023-02-12 05:34:43', '2023-02-12 05:34:43'),
-(13, 'MD: Rubel Khan', 'Rubel', 'rubel@gmail.com', '$2y$10$gmQ23o9NgVIvbNueQHQ3ZubqTt436qO0FjpemvKur2m9edGO7jiOG', 2, 0, 'images/1676312560.jpg', NULL, '2023-02-13 12:22:40', '2023-02-13 12:22:40'),
-(14, 'Md: Mamun Hossen', 'Mamun', 'mamun@gmail.com', '$2y$10$Sfz1KV9vu0Lnpajxm0/GwOTbQtYzXO7QsapBJhCz6soImNrYws9bC', 2, 1, 'images/1676312857.jpg', NULL, '2023-02-13 12:27:37', '2023-02-13 12:27:37');
+(1, 'Md. Rubel Khan', 'Super Admin', 'superadmin@gmail.com', '$2y$10$jNGwiLI2PDj27rBlX0/OHeVp6dKGTmoxwo2Za3GbYzsJryzJLr77u', 1, 1, 'images/default-user-avatar.jpg', 'faKaRIEcRlJxfyPhkNHNTMJKENtFzm497wC94lJB9onrzAD9epsBz6Dpz6T1', '2023-02-12 03:30:15', '2023-02-12 06:53:47'),
+(2, 'admin', 'Retina Soft', 'admin@gmail.com', '$2y$10$y.OXCBr1hMGyvrirE/RRs.iCcKv8hqXsxVcycAjTj10/G2pRtDxv2', 1, 1, 'images/default-user-avatar.jpg', 'lZEVoUAiOaggwk4mxPqv60M0eKa91LK84EDFe83eaRQy3chLE8MjDt1lON4Q', '2023-02-12 05:34:43', '2023-02-12 05:34:43'),
+(3, 'MD: Rubel Khan', 'Rubel', 'rubel@gmail.com', '$2y$10$gmQ23o9NgVIvbNueQHQ3ZubqTt436qO0FjpemvKur2m9edGO7jiOG', 2, 1, 'images/1676368195.png', NULL, '2023-02-13 12:22:40', '2023-02-14 03:49:55'),
+(4, 'Md: Mamun Hossen', 'Mamun', 'mamun@gmail.com', '$2y$10$CaTY8sknuSbm8tWOR6mKsu3zJYzmmOWRV1OrKL3M.0F2IJyZIi.fG', 2, 1, 'images/1676312857.jpg', '0fbtICBNFECTU5HnFR8qBGOexg2EojD9qYImeStRYgqQkF4u5MIj3CI0zafp', '2023-02-13 12:27:37', '2023-02-14 03:50:34');
 
 -- --------------------------------------------------------
 
@@ -669,13 +874,20 @@ CREATE TABLE `employee_attendances` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `employee_id` bigint(20) UNSIGNED NOT NULL,
   `date` date NOT NULL,
-  `in_time` timestamp NOT NULL,
-  `out_time` timestamp NOT NULL,
-  `stay_time` timestamp NOT NULL,
-  `status` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `in_time` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `out_time` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `stay_time` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `employee_attendances`
+--
+
+INSERT INTO `employee_attendances` (`id`, `employee_id`, `date`, `in_time`, `out_time`, `stay_time`, `status`, `created_at`, `updated_at`) VALUES
+(1, 1, '2023-02-14', '09:00:00', '18:01:00', '09:01:00', 'P', '2023-02-14 12:03:21', '2023-02-14 12:03:21');
 
 -- --------------------------------------------------------
 
@@ -698,10 +910,9 @@ CREATE TABLE `employee_contacts` (
 --
 
 INSERT INTO `employee_contacts` (`id`, `employee_id`, `contact_name`, `contact_email`, `contact_phone`, `created_at`, `updated_at`) VALUES
-(1, 13, 'Shohel', 'shohel@gmail.com', '01700000100', '2023-02-13 12:22:40', '2023-02-13 12:22:40'),
-(2, 13, 'Imran', 'imran@gmail.com', '01710000000', '2023-02-13 12:22:40', '2023-02-13 12:22:40'),
-(3, 14, 'Rana', 'rana@gmail.com', '01700000001', '2023-02-13 12:27:37', '2023-02-13 12:27:37'),
-(4, 14, 'Kawsir', 'kawsir@gmail.com', '01700000000', '2023-02-13 12:27:37', '2023-02-13 12:27:37');
+(1, 3, 'Shohel', 'shohel@gmail.com', '01700000100', '2023-02-13 12:22:40', '2023-02-13 12:22:40'),
+(3, 4, 'Rana', 'rana@gmail.com', '01700000001', '2023-02-13 12:27:37', '2023-02-13 12:27:37'),
+(4, 4, 'Kawsir', 'kawsir@gmail.com', '01700000000', '2023-02-13 12:27:37', '2023-02-13 12:27:37');
 
 -- --------------------------------------------------------
 
@@ -723,8 +934,8 @@ CREATE TABLE `employee_details` (
 --
 
 INSERT INTO `employee_details` (`id`, `employee_id`, `address`, `photo`, `created_at`, `updated_at`) VALUES
-(1, 13, 'Mohammadpur, Dhaka', 'images/1676312560.jpg', '2023-02-13 12:22:40', '2023-02-13 12:22:40'),
-(2, 14, 'Mohammadpur, Dhaka', 'images/1676312857.jpg', '2023-02-13 12:27:37', '2023-02-13 12:27:37');
+(1, 3, 'Adabor-12, Mohammadpur, Dhaka', 'images/1676368195.png', '2023-02-13 12:22:40', '2023-02-14 03:49:55'),
+(2, 4, 'Mohammadpur, Dhaka', 'images/1676312857.jpg', '2023-02-13 12:27:37', '2023-02-13 12:27:37');
 
 -- --------------------------------------------------------
 
@@ -861,12 +1072,6 @@ ALTER TABLE `admin_role_permissions`
   ADD KEY `admin_role_permissions_role_id_permission_id_index` (`role_id`,`permission_id`);
 
 --
--- Indexes for table `admin_role_users`
---
-ALTER TABLE `admin_role_users`
-  ADD KEY `admin_role_users_role_id_user_id_index` (`role_id`,`user_id`);
-
---
 -- Indexes for table `admin_users`
 --
 ALTER TABLE `admin_users`
@@ -942,13 +1147,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `admin_menu`
 --
 ALTER TABLE `admin_menu`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `admin_operation_log`
 --
 ALTER TABLE `admin_operation_log`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=425;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=625;
 
 --
 -- AUTO_INCREMENT for table `admin_permissions`
@@ -966,13 +1171,13 @@ ALTER TABLE `admin_roles`
 -- AUTO_INCREMENT for table `admin_users`
 --
 ALTER TABLE `admin_users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `employee_attendances`
 --
 ALTER TABLE `employee_attendances`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `employee_contacts`

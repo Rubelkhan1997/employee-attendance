@@ -17,10 +17,10 @@ class CreateEmployeeAttendancesTable extends Migration
             $table->id();
             $table->foreignId('employee_id')->index();
             $table->date('date');
-            $table->timestamp('in_time');
-            $table->timestamp('out_time');
-            $table->timestamp('stay_time');
-            $table->string('status')->nullable();
+            $table->string('in_time', 100);
+            $table->string('out_time', 100);
+            $table->string('stay_time', 100);
+            $table->string('status', 100)->nullable();
             $table->timestamps();
         });
     }

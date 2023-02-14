@@ -5,14 +5,14 @@
                 <h3 class="box-title">Edit</h3>
                 <div class="box-tools">
                     <div class="btn-group pull-right" style="margin-right: 5px">
-                        <a href="{{ url('/admin/employees') }}" class="btn btn-sm btn-default" title="List">
+                        <a href="{{ url('/admin/attendances') }}" class="btn btn-sm btn-default" title="List">
                             <i class="fa fa-list"></i><span class="hidden-xs">&nbsp;List</span>
                         </a>
                     </div>
                 </div>
             </div>
             <!-- form start -->
-            <form action="{{ url('/admin/employees') }}" method="post" class="form-horizontal add-post-form" accept-charset="UTF-8" enctype="multipart/form-data">
+            <form action="{{ url('/admin/attendances') }}" method="post" class="form-horizontal edit-attendance-form" accept-charset="UTF-8" enctype="multipart/form-data">
                 <div class="box-body">
                     <div class="col-md-12">
                         <div class="form-group">
@@ -170,8 +170,8 @@
 	$(function(){
         $("input[name=status]").bootstrapSwitch({size:'small', onText: 'ON', offText: 'OFF'});
 	});
-    // Add post form 
-    $('.add-post-form').on('submit',function(e){
+    // Edd attendance form 
+    $('.edit-attendance-form').on('submit',function(e){
         e.preventDefault();    
         let form = $(this);
 		let url = form.attr('action');

@@ -12,7 +12,7 @@
                 </div>
             </div>
             <!-- form start -->
-            <form action="{{ url('/admin/employees') }}" method="post" class="form-horizontal add-post-form" accept-charset="UTF-8" enctype="multipart/form-data">
+            <form action="{{ url('/admin/employees') }}" method="post" class="form-horizontal edit-employee-form" accept-charset="UTF-8" enctype="multipart/form-data">
                 <div class="box-body">
                     <div class="col-md-12">
                         <div class="form-group">
@@ -170,8 +170,8 @@
 	$(function(){
         $("input[name=status]").bootstrapSwitch({size:'small', onText: 'ON', offText: 'OFF'});
 	});
-    // Add post form 
-    $('.add-post-form').on('submit',function(e){
+    // Edit employee form 
+    $('.edit-employee-form').on('submit',function(e){
         e.preventDefault();    
         let form = $(this);
 		let url = form.attr('action');

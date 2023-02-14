@@ -5,18 +5,18 @@
                 <h3 class="box-title">Create</h3>
                 <div class="box-tools">
                     <div class="btn-group pull-right" style="margin-right: 5px">
-                        <a href="{{ url('/admin/employees') }}" class="btn btn-sm btn-default" title="List">
+                        <a href="{{ url('/admin/attendances') }}" class="btn btn-sm btn-default" title="List">
                             <i class="fa fa-list"></i><span class="hidden-xs">&nbsp;List</span>
                         </a>
                     </div>
                 </div>
             </div>
             <!-- form start -->
-            <form action="{{ url('/admin/employees') }}" method="post" class="form-horizontal add-post-form" accept-charset="UTF-8" enctype="multipart/form-data">
+            <form action="{{ url('/admin/attendances') }}" method="post" class="form-horizontal add-attendance-form" accept-charset="UTF-8" enctype="multipart/form-data">
                 <div class="box-body">
                     <div class="col-md-12">
-                        <div class="form-group">
-                            <label for="full_name" class="col-sm-2 asterisk control-label">Full Name</label>
+                        {{-- <div class="form-group">
+                            <label for="full_name" class="col-sm-2 asterisk control-label">Date</label>
                             <div class="col-sm-8">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
@@ -26,114 +26,30 @@
                             @error('full_name')
                                 <span class="text-danger pb-1">{{ $message }}</span>
                             @enderror
-                        </div>
+                        </div> --}}
                         <div class="form-group">
-                            <label for="name" class="col-sm-2 asterisk control-label">First Name</label>
+                            <label for="in_time" class="col-sm-2 asterisk control-label">In Time</label>
                             <div class="col-sm-8">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-                                    <input type="text" name="name"  class="form-control"  placeholder="Enter your first name" required> 
+                                    <input type="text" name="in_time" value="09:00"  class="form-control date_picker"> 
                                 </div>
                             </div>
-                            @error('name')
+                            @error('in_time')
                                 <span class="text-danger pb-1">{{ $message }}</span>
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="email" class="col-sm-2 asterisk control-label">Email</label>
+                            <label for="out_time" class="col-sm-2 asterisk control-label">Out Time</label>
                             <div class="col-sm-8">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-                                    <input type="email" name="email"  class="form-control"  placeholder="Enter your email" required> 
+                                    <input type="text" name="out_time" value="{{ date('H:i') }}" class="form-control date_picker"> 
                                 </div>
                             </div>
-                            @error('email')
+                            @error('out_time')
                                 <span class="text-danger pb-1">{{ $message }}</span>
                             @enderror
-                        </div>
-                        <div class="form-group">
-                            <label for="password" class="col-sm-2 asterisk control-label">Password</label>
-                            <div class="col-sm-8">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-                                    <input type="password" name="password"  class="form-control"  placeholder="Enter your password" required> 
-                                </div>
-                            </div>
-                            @error('password')
-                                <span class="text-danger pb-1">{{ $message }}</span>
-                            @enderror
-                        </div>
-                        <div class="form-group">
-                            <label for="c_password" class="col-sm-2 asterisk control-label">Confirm Password</label>
-                            <div class="col-sm-8">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-                                    <input type="password" name="c_password"  class="form-control"  placeholder="Enter your confirm password" required> 
-                                </div>
-                            </div>
-                            @error('c_password')
-                                <span class="text-danger pb-1">{{ $message }}</span>
-                            @enderror
-                        </div>
-                        <div class="form-group">
-                            <label for="address" class="col-sm-2 asterisk control-label">Address</label>
-                            <div class="col-sm-8">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-                                    <input type="text" name="address"  class="form-control"  placeholder="Enter your address" required> 
-                                </div>
-                            </div>
-                            @error('address')
-                                <span class="text-danger pb-1">{{ $message }}</span>
-                            @enderror
-                        </div>
-                        <div class="form-group">
-                            <label for="avatar" class="col-sm-2 asterisk control-label">Image</label>
-                            <div class="col-sm-8">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-                                    <input type="file" name="avatar"  class="form-control" required> 
-                                </div>
-                            </div>
-                            @error('avatar')
-                                <span class="text-danger pb-1">{{ $message }}</span>
-                            @enderror
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-2 asterisk control-label">Contacts</label>
-                            <div class="col-sm-8">
-                                <table class="table table-hover" style="margin-bottom: 0px">
-                                    <thead>
-                                        <tr>
-                                            <td style="font-weight:600">Name <span style="color: red">*</span></td>
-                                            <td style="font-weight:600">Mobile <span style="color: red">*</span></td>
-                                            <td style="font-weight:600">Email <span style="color: red">*</span></td>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="append_field">
-                                        <tr class="file_count">
-                                            <td width="30%"><input type="text"  name="c_name[]"    class="form-control" placeholder="Enter name" required></td>
-                                            <td width="30%"><input type="text"  name="c_mobile[]"  class="form-control" placeholder="Enter mobile" required></td>  
-                                            <td width="30%"><input type="email" name="c_email[]"   class="form-control" placeholder="Enter email" required></td>
-                                            <td></td>
-                                        </tr>
-                                    </tbody>
-                                    <tfoot class="add_field">
-                                        <tr>
-                                           <td><div onclick="add_field()" class="btn btn-success btn-sm"><i class="fa fa-save"></i>&nbsp;New</div></td>
-                                        </tr>
-                                    </tfoot>
-                                </table>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="title" class="col-sm-2 asterisk control-label">Status</label>
-                            <div class="col-sm-8">
-                                <input type="checkbox" name="status"  value="1"  checked>
-                                @error('status')
-                                    <span class="text-danger pb-1">{{ $message }}</span>
-                                @enderror
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -159,9 +75,10 @@
 <script>
 	$(function(){
         $("input[name=status]").bootstrapSwitch({size:'small', onText: 'ON', offText: 'OFF'});
+        $('.date_picker').datetimepicker({format: "HH:mm:ss"});
 	});
-    // Add post form 
-    $('.add-post-form').on('submit',function(e){
+    // Add attendance form 
+    $('.add-attendance-form').on('submit',function(e){
         e.preventDefault();    
         let form = $(this);
 		let url = form.attr('action');
@@ -178,12 +95,8 @@
             dataType: 'json',
             success: function (response) {
                 button_disable(false);
-                if(response.status == 1){
-                    toastr.success(response.message);
-                    window.location = "{{ url('/admin/employees') }}";
-                }else{
-                    toastr.error(response.message);
-                }
+                toastr.success(response.message);
+                // window.location = "{{ url('/admin/attendances') }}";
             },
             error: function(response){   
                 button_disable(false);
