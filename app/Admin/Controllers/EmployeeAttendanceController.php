@@ -27,11 +27,11 @@ class EmployeeAttendanceController extends Controller
         if($date){
             $query->where('date', '>=', $date)->where('date', '<=', $date);
         }else{
-            $query->where('date', '>=', date('01-M-Y'))->where('date', '<=', date('t-M-Y'));
+            $query->where('date', '>=', date('Y-m-d'))->where('date', '<=', date('Y-m-d'));
         }
         // 
         $employees   = AdminUser::where('type', 2)->pluck('full_name', 'id')->toArray();
-        $attendances = $query->orderBy('id', 'DESC')->get();
+        $attendances = $query->orderBy('id', 'DESC')->paginate(100)->withQueryString();
                                 
         return $content
             ->title('Attendance')

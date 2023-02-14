@@ -17,7 +17,7 @@
 							<div class="row">
 								@if (admin_check())
 									<div class="col-xs-12 col-sm-3 mb-5">
-										<select name="employee_id" class="form-control employee-select2" >
+										<select name="employee_id" class="form-control employee-select2">
 											<option selected value="">Select the employee</option>
 											@foreach ($employees as $key => $employee)
 												<option value="{{ $key }}">{{ $employee }}</option>
@@ -26,7 +26,7 @@
 									</div>
 								@endif
 								<div class="col-xs-12 col-sm-3 mb-5">
-									<input type="text" name="date" value="{{ Request::get('date') }}" placeholder="Select a date" class="form-control date_picker">
+									<input type="text" name="date" value="{{ Request::get('date') }}" placeholder="Select a date" autocomplete="off" class="form-control date_picker">
 								</div>
 								<div class="col-xs-12 col-sm-3 mb-5">
 									<button type="submit" class="btn btn-success">Submit</button>
@@ -74,6 +74,7 @@
 							@endforeach
 						</tbody>
 					</table>
+					{{ $attendances->links() }}
 				</div>
 			</div>
 		</div>
