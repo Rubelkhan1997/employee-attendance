@@ -17,4 +17,8 @@ class EmployeeAttendance extends Model
         'stay_time',
         'employee_id',
     ];
+
+    function employee(){
+        return $this->hasOne(AdminUser::class, 'id', 'employee_id');
+    }
 }

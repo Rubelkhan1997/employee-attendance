@@ -45,6 +45,8 @@
 						<thead>
 							<tr>
 								<th>SL</th>
+								<th>Employee</th>
+								<th>Date</th>
 								<th>In Time</th>
 								<th>Out Time</th>
 								<th>Stay Time</th>
@@ -55,7 +57,12 @@
 							@foreach($employees as $em)
 								<tr>
 									<td>{{ $loop->iteration }}</td>
-									 
+									<td>{{ @$em->employee->full_name }}</td>
+									<td>{{ $em->date }}</td>
+									<td>{{ $em->in_time }}</td>
+									<td>{{ $em->out_time }}</td>
+									<td>{{ $em->stay_time }}</td>
+									<td>{{ $em->status }}</td>
 								</tr>
 							@endforeach
 						</tbody>

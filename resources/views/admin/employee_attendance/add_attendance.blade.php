@@ -15,18 +15,19 @@
             <form action="{{ url('/admin/attendances') }}" method="post" class="form-horizontal add-attendance-form" accept-charset="UTF-8" enctype="multipart/form-data">
                 <div class="box-body">
                     <div class="col-md-12">
-                        {{-- <div class="form-group">
-                            <label for="full_name" class="col-sm-2 asterisk control-label">Date</label>
+                        @if (in_array("administrator", login_role_slugs()) || in_array("admin", login_role_slugs()))
+                            <div class="form-group">
+                            <label for="employee_id" class="col-sm-2 asterisk control-label">Employee</label>
                             <div class="col-sm-8">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-                                    <input type="text" name="full_name"  class="form-control" placeholder="Enter your full name" required> 
-                                </div>
+                                <select name="employee_id" class="form-control employee-select2" >
+                                    <option selected value="">Select the employee</option>
+                                    @foreach ($employees as $key => $employee)
+                                        <option value="{{ $key }}" @selected(old('employee_id') == $key)>{{ $employee }}</option>
+                                    @endforeach
+                                </select>
                             </div>
-                            @error('full_name')
-                                <span class="text-danger pb-1">{{ $message }}</span>
-                            @enderror
-                        </div> --}}
+                        </div>
+                        @endif
                         <div class="form-group">
                             <label for="in_time" class="col-sm-2 asterisk control-label">In Time</label>
                             <div class="col-sm-8">
@@ -74,6 +75,10 @@
 
 <script>
 	$(function(){
+        $('.employee-select2').select2({
+            placeholder: 'Select the employee',
+			allowClear: true
+		});
         $("input[name=status]").bootstrapSwitch({size:'small', onText: 'ON', offText: 'OFF'});
         $('.date_picker').datetimepicker({format: "HH:mm:ss"});
 	});

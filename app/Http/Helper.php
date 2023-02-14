@@ -1,4 +1,5 @@
 <?php
+use Encore\Admin\Facades\Admin;
 
 function status($status){
    return $status == 1? 'Active': 'In-Active';
@@ -35,4 +36,18 @@ function stay_time($in_time, $out_time){
    $hour      = $interval->format('%H');
 
    return ['time' => $stay_time, 'hour' => $hour];
+}
+function admin_slug(){
+   return [
+      "administrator",
+      "admin",
+   ];
+}
+function login_role_slugs(){
+   $roles = Admin::user()->roles;
+   $slugs = [];
+   foreach($roles as $role){
+      $slugs[]= $role->slug;
+   }
+   return $slugs;
 }

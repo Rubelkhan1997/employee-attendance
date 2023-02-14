@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Feb 14, 2023 at 12:03 PM
+-- Generation Time: Feb 14, 2023 at 01:02 PM
 -- Server version: 5.7.40
 -- PHP Version: 7.4.19
 
@@ -701,7 +701,71 @@ INSERT INTO `admin_operation_log` (`id`, `user_id`, `path`, `method`, `ip`, `inp
 (621, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"in_time\":\"09:00:00\",\"out_time\":\"18:01:00\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 12:01:38', '2023-02-14 12:01:38'),
 (622, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"in_time\":\"09:00:00\",\"out_time\":\"18:01:00\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 12:03:20', '2023-02-14 12:03:20'),
 (623, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"in_time\":\"09:00:00\",\"out_time\":\"18:01:00\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 12:03:32', '2023-02-14 12:03:32'),
-(624, 1, 'admin/attendances', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 12:03:36', '2023-02-14 12:03:36');
+(624, 1, 'admin/attendances', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 12:03:36', '2023-02-14 12:03:36'),
+(625, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 12:04:46', '2023-02-14 12:04:46'),
+(626, 4, 'admin/attendances', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 12:04:51', '2023-02-14 12:04:51'),
+(627, 4, 'admin/attendances', 'GET', '127.0.0.1', '[]', '2023-02-14 12:05:49', '2023-02-14 12:05:49'),
+(628, 4, 'admin/attendances', 'GET', '127.0.0.1', '[]', '2023-02-14 12:05:52', '2023-02-14 12:05:52'),
+(629, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"in_time\":\"09:00:00\",\"out_time\":\"18:04:00\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 12:27:18', '2023-02-14 12:27:18'),
+(630, 1, 'admin/attendances', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 12:27:51', '2023-02-14 12:27:51'),
+(631, 1, 'admin/attendances', 'GET', '127.0.0.1', '[]', '2023-02-14 12:27:54', '2023-02-14 12:27:54'),
+(632, 1, 'admin/attendances', 'GET', '127.0.0.1', '[]', '2023-02-14 12:27:56', '2023-02-14 12:27:56'),
+(633, 1, 'admin/attendances', 'GET', '127.0.0.1', '[]', '2023-02-14 12:29:29', '2023-02-14 12:29:29'),
+(634, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 12:29:32', '2023-02-14 12:29:32'),
+(635, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 12:31:24', '2023-02-14 12:31:24'),
+(636, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 12:31:27', '2023-02-14 12:31:27'),
+(637, 4, 'admin/attendances', 'GET', '127.0.0.1', '[]', '2023-02-14 12:31:31', '2023-02-14 12:31:31'),
+(638, 4, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 12:31:32', '2023-02-14 12:31:32'),
+(639, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 12:31:49', '2023-02-14 12:31:49'),
+(640, 4, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 12:31:54', '2023-02-14 12:31:54'),
+(641, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 12:32:11', '2023-02-14 12:32:11'),
+(642, 1, 'admin/attendances', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 12:32:13', '2023-02-14 12:32:13'),
+(643, 1, 'admin/attendances', 'GET', '127.0.0.1', '[]', '2023-02-14 12:32:15', '2023-02-14 12:32:15'),
+(644, 1, 'admin/attendances', 'GET', '127.0.0.1', '[]', '2023-02-14 12:37:07', '2023-02-14 12:37:07'),
+(645, 1, 'admin/attendances', 'GET', '127.0.0.1', '[]', '2023-02-14 12:37:18', '2023-02-14 12:37:18'),
+(646, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 12:37:21', '2023-02-14 12:37:21'),
+(647, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 12:38:48', '2023-02-14 12:38:48'),
+(648, 4, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 12:38:52', '2023-02-14 12:38:52'),
+(649, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 12:39:09', '2023-02-14 12:39:09'),
+(650, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 12:39:27', '2023-02-14 12:39:27'),
+(651, 4, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 12:39:34', '2023-02-14 12:39:34'),
+(652, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 12:39:44', '2023-02-14 12:39:44'),
+(653, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 12:41:21', '2023-02-14 12:41:21'),
+(654, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 12:41:32', '2023-02-14 12:41:32'),
+(655, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 12:44:15', '2023-02-14 12:44:15'),
+(656, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 12:46:27', '2023-02-14 12:46:27'),
+(657, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 12:46:46', '2023-02-14 12:46:46'),
+(658, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 12:51:10', '2023-02-14 12:51:10'),
+(659, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 12:51:21', '2023-02-14 12:51:21'),
+(660, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"employee_id\":\"3\",\"in_time\":\"09:00:00\",\"out_time\":\"18:51:00\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 12:51:25', '2023-02-14 12:51:25'),
+(661, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"employee_id\":\"3\",\"in_time\":\"09:00:00\",\"out_time\":\"18:51:00\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 12:51:37', '2023-02-14 12:51:37'),
+(662, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"employee_id\":\"4\",\"in_time\":\"09:00:00\",\"out_time\":\"18:51:00\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 12:51:41', '2023-02-14 12:51:41'),
+(663, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 12:51:48', '2023-02-14 12:51:48'),
+(664, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"employee_id\":null,\"in_time\":\"09:00:00\",\"out_time\":\"18:51:00\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 12:51:50', '2023-02-14 12:51:50'),
+(665, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 12:52:14', '2023-02-14 12:52:14'),
+(666, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"employee_id\":null,\"in_time\":\"09:00:00\",\"out_time\":\"18:52:00\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 12:52:17', '2023-02-14 12:52:17'),
+(667, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 12:52:33', '2023-02-14 12:52:33'),
+(668, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"employee_id\":null,\"in_time\":\"09:00:00\",\"out_time\":\"18:52:00\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 12:52:35', '2023-02-14 12:52:35'),
+(669, 1, 'admin/attendances/create', 'GET', '127.0.0.1', '[]', '2023-02-14 12:53:14', '2023-02-14 12:53:14'),
+(670, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"employee_id\":null,\"in_time\":\"09:00:00\",\"out_time\":\"18:53:00\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 12:53:18', '2023-02-14 12:53:18'),
+(671, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"employee_id\":null,\"in_time\":\"09:00:00\",\"out_time\":\"18:53:00\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 12:53:22', '2023-02-14 12:53:22'),
+(672, 1, 'admin/attendances', 'POST', '127.0.0.1', '{\"employee_id\":\"4\",\"in_time\":\"09:00:00\",\"out_time\":\"18:53:00\",\"_token\":\"y2D9FEnd8TjmUa59pLCeX0fEf8zMb8AB68p2wMEY\"}', '2023-02-14 12:53:24', '2023-02-14 12:53:24'),
+(673, 1, 'admin/attendances', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-02-14 12:53:43', '2023-02-14 12:53:43'),
+(674, 1, 'admin/attendances', 'GET', '127.0.0.1', '[]', '2023-02-14 12:54:30', '2023-02-14 12:54:30'),
+(675, 1, 'admin/attendances', 'GET', '127.0.0.1', '[]', '2023-02-14 12:55:03', '2023-02-14 12:55:03'),
+(676, 1, 'admin/attendances', 'GET', '127.0.0.1', '[]', '2023-02-14 12:55:15', '2023-02-14 12:55:15'),
+(677, 1, 'admin/attendances', 'GET', '127.0.0.1', '[]', '2023-02-14 12:55:25', '2023-02-14 12:55:25'),
+(678, 1, 'admin/attendances', 'GET', '127.0.0.1', '[]', '2023-02-14 12:56:25', '2023-02-14 12:56:25'),
+(679, 1, 'admin/attendances', 'GET', '127.0.0.1', '[]', '2023-02-14 12:57:13', '2023-02-14 12:57:13'),
+(680, 1, 'admin/attendances', 'GET', '127.0.0.1', '[]', '2023-02-14 12:58:09', '2023-02-14 12:58:09'),
+(681, 1, 'admin/attendances', 'GET', '127.0.0.1', '[]', '2023-02-14 12:59:57', '2023-02-14 12:59:57'),
+(682, 1, 'admin/attendances', 'GET', '127.0.0.1', '[]', '2023-02-14 13:00:40', '2023-02-14 13:00:40'),
+(683, 1, 'admin/attendances', 'GET', '127.0.0.1', '[]', '2023-02-14 13:00:42', '2023-02-14 13:00:42'),
+(684, 1, 'admin/attendances', 'GET', '127.0.0.1', '[]', '2023-02-14 13:00:44', '2023-02-14 13:00:44'),
+(685, 1, 'admin/attendances', 'GET', '127.0.0.1', '[]', '2023-02-14 13:01:02', '2023-02-14 13:01:02'),
+(686, 1, 'admin/attendances', 'GET', '127.0.0.1', '[]', '2023-02-14 13:01:38', '2023-02-14 13:01:38'),
+(687, 1, 'admin/attendances', 'GET', '127.0.0.1', '[]', '2023-02-14 13:02:00', '2023-02-14 13:02:00'),
+(688, 1, 'admin/attendances', 'GET', '127.0.0.1', '[]', '2023-02-14 13:02:21', '2023-02-14 13:02:21');
 
 -- --------------------------------------------------------
 
@@ -887,7 +951,8 @@ CREATE TABLE `employee_attendances` (
 --
 
 INSERT INTO `employee_attendances` (`id`, `employee_id`, `date`, `in_time`, `out_time`, `stay_time`, `status`, `created_at`, `updated_at`) VALUES
-(1, 1, '2023-02-14', '09:00:00', '18:01:00', '09:01:00', 'P', '2023-02-14 12:03:21', '2023-02-14 12:03:21');
+(1, 4, '2023-02-14', '09:00:00', '18:01:00', '09:01:00', 'P', '2023-02-14 12:03:21', '2023-02-14 12:03:21'),
+(3, 3, '2023-02-14', '09:00:00', '18:51:00', '09:51:00', 'P', '2023-02-14 12:51:25', '2023-02-14 12:51:25');
 
 -- --------------------------------------------------------
 
@@ -1153,7 +1218,7 @@ ALTER TABLE `admin_menu`
 -- AUTO_INCREMENT for table `admin_operation_log`
 --
 ALTER TABLE `admin_operation_log`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=625;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=689;
 
 --
 -- AUTO_INCREMENT for table `admin_permissions`
@@ -1177,7 +1242,7 @@ ALTER TABLE `admin_users`
 -- AUTO_INCREMENT for table `employee_attendances`
 --
 ALTER TABLE `employee_attendances`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `employee_contacts`
