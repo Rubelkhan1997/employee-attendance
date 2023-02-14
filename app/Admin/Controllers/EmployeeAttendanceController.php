@@ -2,45 +2,35 @@
 
 namespace App\Admin\Controllers;
 
-use App\Http\Requests\EmployeeRequest;
-use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Hash;
-use Encore\Admin\Layout\Content;
-use App\Models\EmployeeContact;
-use App\Models\EmployeeDetail;
-use App\Models\AdminRoleUser;
-use Illuminate\Http\Request;
-use App\Models\AdminUser;
 
-class EmployeeController extends Controller
+use App\Http\Controllers\Controller;
+use App\Models\EmployeeAttendance;
+use Encore\Admin\Layout\Content;
+use Encore\Admin\Facades\Admin;
+use Illuminate\Http\Request;
+
+class EmployeeAttendanceController extends Controller
 {
     public function index(Content $content, Request $request)
     {
+        // return Admin::user()->roles[0]->slug;
         $name   = $request->name;
         $status = $request->status;
         // Query
-        $query = AdminUser::where('type', 2);
+        $query = EmployeeAttendance::where('employee_id', Admin::user()->id);
         // Status
-        if($status){
-            $query->where('status', $status == 2? 0 : 1);
-        }
-        if($name){
-            $query->whereRaw("full_name like '%$name%'")
-                ->orWhereHas('employee_contacts', function($q) use ($name){
-                    $q->whereRaw("contact_name like '%$name%'");
-                });
-        }
+        
         $employees = $query->orderBy('id', 'DESC')->paginate(100)->withQueryString();
                                 
         return $content
-            ->title('Employee')
+            ->title('Attendance')
             ->description('List')
             ->view('admin.employee.list_employee',compact('employees'));
     }
     public function create(Content $content)
     {
         return $content
-            ->title('Employee')
+            ->title('Attendance')
             ->description('Create')
             ->view('admin.employee.add_employee');
     }
@@ -150,10 +140,8 @@ class EmployeeController extends Controller
         $employee = AdminUser::find($id);
 
         return $content
-            ->title('Employee')
+            ->title('Attendance')
             ->description('Edit')
             ->view('admin.employee.edit_employee',compact('employee'));
     }
-   
-
 }

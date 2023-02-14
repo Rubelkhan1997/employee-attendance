@@ -14,7 +14,8 @@ Route::group([
     $router->get('/', 'HomeController@index')->name('home');
 
     $router->resources([
-        'employees' => EmployeeController::class,
+        'employees'  => EmployeeController::class,
+        'attendance' => EmployeeAttendanceController::class,
     ]);
 
 });

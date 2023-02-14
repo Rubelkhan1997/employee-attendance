@@ -25,10 +25,9 @@ class EmployeeRequest extends FormRequest
     {
         return [
             'address'     => 'required|string',
-            'avatar'      => 'required',
-            'c_password'  => 'required|same:password',
-            'password'    => 'required',
-            'email'       => 'required|email|unique:admin_users,email',
+            'c_password'  => 'nullable|min:6',
+            'password'    => 'nullable|min:6',
+            'email'       => 'required|email|unique:admin_users,email,'.$this->id,
             'name'        => 'required|string',
             'full_name'   => 'required|string',
             'id'          => 'nullable|numeric|exists:admin_users,id',
