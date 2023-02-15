@@ -9,6 +9,7 @@ use Encore\Admin\Layout\Content;
 use Encore\Admin\Facades\Admin;
 use Illuminate\Http\Request;
 use App\Models\AdminUser;
+
 class EmployeeAttendanceController extends Controller
 {
     public function index(Content $content, Request $request)
@@ -21,17 +22,22 @@ class EmployeeAttendanceController extends Controller
             if($em_id){
                 $query->where('employee_id', $em_id);
             }
+            $start_date = date('Y-m-d');
+            $end_date   = date('Y-m-d');
+
         }else{
             $query = EmployeeAttendance::where('employee_id', Admin::user()->id);
+            $start_date = date('Y-m-01');
+            $end_date   = date('Y-m-t');
         }
         if($date){
             $query->where('date', '>=', $date)->where('date', '<=', $date);
         }else{
-            $query->where('date', '>=', date('Y-m-d'))->where('date', '<=', date('Y-m-d'));
+            $query->whereRaw("date >= $start_date AND date $end_date");
         }
         // 
         $employees   = AdminUser::where('type', 2)->pluck('full_name', 'id')->toArray();
-        $attendances = $query->orderBy('id', 'DESC')->paginate(100)->withQueryString();
+        $attendances = $query->orderBy('date', 'DESC')->paginate(100)->withQueryString();
                                 
         return $content
             ->title('Attendance')
