@@ -17,9 +17,10 @@
 							<div class="row">
                                 <div class="col-xs-12 col-sm-3 mb-5">
                                     <select name="report_type" class="form-control type-select2" onchange="report_type_change(this.value)" style="width:100%;" required>
-                                        <option selected value="">Select the report type</option>
-                                        <option value="1">Monthly</option>
-                                        <option value="2">Summary</option>
+                                        <option selected value="1">Monthly</option>
+										@if (admin_check())
+                                        <option value="2">Monthly Summary</option>
+										@endif
                                     </select>
                                 </div>
 								@if (admin_check())
@@ -44,9 +45,6 @@
 					</div>
 				</div>
 			</div>
-						{{-- @if (admin_check())
-										<td>{{ @$attend->employee->full_name }}</td>
-									@endif --}}
 			<div class="box-body">
 				<div class="table-responsive">
 					@if (Request::get('report_type') == 1)
@@ -86,14 +84,16 @@
 								</tr>
 							</thead>
 							<tbody>
-								@foreach((object) $attendances as $attend)
+								@foreach((array) $attendances as $key => $attend)
+									@php
+										$result = total_stay_time($attend['stay_time'], $attend['working_days'])
+									@endphp
 									<tr>
-										<td>{{ $loop->iteration }}</td>
-										<td>{{ $attend->date }}</td>
-										<td>{{ $attend->in_time }}</td>
-										<td>{{ $attend->out_time }}</td>
-										<td>{{ $attend->stay_time }}</td>
-										<td>{{ $attend->status }}</td>
+										<td>{{ ++$key }}</td>
+										<td>{{ $attend['full_name'] }}</td>
+										<td>{{ $attend['working_days'] }}</td>
+										<td>{{ $result['total_time'] }}</td> 
+										<td>{{ $result['average_time'] }}</td> 
 									</tr>
 								@endforeach
 							</tbody>
@@ -110,7 +110,6 @@
 	let old_report_type  = "{{ Request::get('report_type') }}";
 	$(function(){
 		$('.type-select2').select2({
-            placeholder: 'Select the report type',
 			allowClear: true
 		});
 		$('.employee-select2').select2({

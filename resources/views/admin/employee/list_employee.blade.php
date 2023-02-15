@@ -67,7 +67,7 @@
 										@php
 											$contacts = [];
 											foreach (@$em->employee_contacts as $key => $con) {
-												$contacts[] =  "<p>Name: $con->contact_name. Email: $con->contact_email. Mobile: $con->contact_phone</p>" ; 	
+												$contacts[] =  "<p>Name: $con->contact_name, Email: $con->contact_email, Mobile: $con->contact_phone</p>" ; 	
 											}
 											echo implode(' ', $contacts);
 										@endphp
