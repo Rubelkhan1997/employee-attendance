@@ -33,7 +33,7 @@ class EmployeeAttendanceController extends Controller
         if($date){
             $query->where('date', '>=', $date)->where('date', '<=', $date);
         }else{
-            $query->whereRaw("date >= $start_date AND date $end_date");
+            $query->whereRaw("date >= '$start_date' AND date '$end_date'");
         }
         // 
         $employees   = AdminUser::where('type', 2)->pluck('full_name', 'id')->toArray();

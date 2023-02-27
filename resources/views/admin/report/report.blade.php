@@ -15,9 +15,9 @@
 					<div class="col-sm-10">
 						<form action="{{ url('/admin/reports') }}" method="get">
 							<div class="row">
-                                <div class="col-xs-12 col-sm-3 mb-5">
+                                <div class="col-xs-12 col-sm-2 mb-5">
                                     <select name="report_type" class="form-control type-select2" onchange="report_type_change(this.value)" style="width:100%;" required>
-                                        <option selected value="1">Monthly</option>
+                                        <option selected value="1">Daily Summary</option>
 										@if (admin_check())
                                         <option value="2">Monthly Summary</option>
 										@endif
@@ -25,7 +25,7 @@
                                 </div>
 								@if (admin_check())
 									<div class="col-xs-12 col-sm-3 mb-5 employee-div">
-										<select name="employee_id" class="form-control employee-select2">
+										<select name="employee_id" class="form-control employee-select2" required>
 											<option selected value="">Select the employee</option>
 											@foreach ($employees as $key => $employee)
 												<option value="{{ $key }}">{{ $employee }}</option>
@@ -33,8 +33,14 @@
 										</select>
 									</div>
 								@endif
-								<div class="col-xs-12 col-sm-3 mb-5">
-									<input type="text" name="date" value="{{ Request::get('date') }}" placeholder="Select a date" autocomplete="off" class="form-control date_picker" required>
+								<div class="col-xs-12 col-sm-2 mb-5 date_picker_div">
+									<input type="text" name="s_date" value="{{ Request::get('s_date') }}" placeholder="Select start date" autocomplete="off" class="form-control date_picker" required>
+								</div>
+								<div class="col-xs-12 col-sm-2 mb-5 date_picker_div">
+									<input type="text" name="e_date" value="{{ Request::get('e_date') }}" placeholder="Select end date" autocomplete="off" class="form-control date_picker" required>
+								</div>
+								<div class="col-xs-12 col-sm-2 mb-5 month_picker_div" style="display:none">
+									<input type="text" name="date" value="{{ Request::get('date') }}" placeholder="Select month" autocomplete="off" class="form-control month_picker">
 								</div>
 								<div class="col-xs-12 col-sm-3 mb-5">
 									<button type="submit" class="btn btn-success">Submit</button>
@@ -116,10 +122,18 @@
             placeholder: 'Select the employee',
 			allowClear: true
 		});
+		
 		$('.date_picker').datetimepicker({
+            format: "DD-MMM-YYYY",
+            maxDate: new Date(),
+        });
+
+		$('.month_picker').datetimepicker({
             format: "MMM-YYYY",
             maxDate: new Date(),
         });
+
+
 		if(old_report_type){$('.type-select2').val(old_report_type).trigger('change')}
 		if(old_employee_id){$('.employee-select2').val(old_employee_id).trigger('change')}
 	});
@@ -136,9 +150,16 @@
 	function report_type_change(value){
 		if(value==2){
 			$('.employee-div').hide();
+			$('.date_picker_div').hide();
+			$('.month_picker_div').show();
+			$('.month_picker').attr('required', true);
+			$('.employee-select2').attr('required', false);	
+			$('.date_picker').attr('required', false);
 		}else{
 			$('.employee-div').show();
-			$('.employee-select2').attr('required', true)	
+			$('.date_picker_div').show();
+			$('.month_picker_div').hide();
+			$('.employee-select2').attr('required', true);	
 		}
 	}
 </script>
